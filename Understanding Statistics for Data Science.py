@@ -287,6 +287,13 @@ plt.hist(x='Overall Marks', data=df, bins=20)
 # P value for Z Score 1.92 = 0.9726 (i.e. P value for marks greater than 40 = 1 - 0.9726 = 0.0274)
 # P value for marks greater than 45 is 0.0274 which is significantly less than 0.05. Hence, we reject null hypothesis
 
+# If the z test performed is a left tailed test "<", then this is the P-Value.  If, right tailed test ">" then P-Value
+# is 1 minus this number.  If this is a two tailed test and the result is less than 0.5, then the double this number to
+# get the P-Value.  If this is a two tailed test and the result is greater than 0.5 then first subtract from 1 and then
+# double the result to get the P-Value.
+
+# For a two tail test, Z score for 95% Probability is 1.96. For one tail test, 95% Probability is 1.645
+
 # UNDERSTANDING ERRORS WHILE HYPOTHESIS TESTING
 
 # TYPE 1 ERROR: When Null Hypothesis is actually True, but we rejected it. Also known as FALSE POSITIVE.
@@ -312,8 +319,22 @@ plt.hist(x='Overall Marks', data=df, bins=20)
 
 # CONDUCTING ONE SAMPLE T TEST
 
+import pandas as pd
+pd.set_option('display.max_column', 100)
+pd.set_option('display.max_row', 110)
+pd.set_option('expand_frame_repr', False)
+project_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course"
+path = project_dir+"/Data Files/Understanding Statistics/One Tail T Test.csv"
+import scipy.stats as stats
+from scipy.stats import ttest_1samp
 
+df = pd.read_csv(path)
+df.head()
 
+df.mean = df['Overall Marks'].mean()
+t_statistic, p_value = ttest_1samp(df['Overall Marks'],70)
+p_value
+t_statistic
 
-
+# As the P value is greater than 0.05, we fail to reject the null hypothesis (sample mean = population mean)
 
