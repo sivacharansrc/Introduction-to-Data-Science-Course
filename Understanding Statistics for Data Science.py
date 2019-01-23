@@ -312,8 +312,20 @@ plt.hist(x='Overall Marks', data=df, bins=20)
 
 # CONDUCTING ONE SAMPLE T TEST
 
+import pandas as pd
+pd.set_option('display.max_column', 100)
+pd.set_option('expand_frame_repr', False)
+project_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course"
+path = project_dir+"/Data Files/Understanding Statistics/One Tail T Test.csv"
+import scipy.stats as stats
+from scipy.stats import ttest_1samp
 
+df = pd.read_csv(path)
+df.head()
 
+df.mean = df['Overall Marks'].mean()
+t_statistic, p_value = ttest_1samp(df['Overall Marks'],70)
+p_value
 
-
+# As the P value is greater than 0.05, we fail to reject the null hypothesis (sample mean = population mean)
 
