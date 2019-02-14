@@ -285,7 +285,7 @@ plt.hist(x='Overall Marks', data=df, bins=20)
 # Z = 5 / 2.6 = 1.92
 
 # P value for Z Score 1.92 = 0.9726 (i.e. P value for marks greater than 40 = 1 - 0.9726 = 0.0274)
-# P value for marks greater than 45 is 0.0274 which is significantly less than 0.05. Hence, we reject null hypothesis
+# P value for marks greater than 40 is 0.0274 which is significantly less than 0.05. Hence, we reject null hypothesis
 
 # If the z test performed is a left tailed test "<", then this is the P-Value.  If, right tailed test ">" then P-Value
 # is 1 minus this number.  If this is a two tailed test and the result is less than 0.5, then the double this number to
