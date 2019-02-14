@@ -325,7 +325,7 @@ pd.set_option('display.max_row', 110)
 pd.set_option('expand_frame_repr', False)
 project_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course"
 path = project_dir+"/Data Files/Understanding Statistics/One Tail T Test.csv"
-import scipy.stats as stats
+#import scipy.stats as stats
 from scipy.stats import ttest_1samp
 
 df = pd.read_csv(path)
@@ -360,6 +360,7 @@ t_statistic
 
 # As the P value is less than 0.05, we reject the null hypothesis and conclude that there is significant difference
 # errors  in typewrite vs computer
+
 
 
 
