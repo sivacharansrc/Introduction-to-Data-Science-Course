@@ -317,30 +317,46 @@ plt.hist(x='Overall Marks', data=df, bins=20)
 # The t distribution from the same will be wider than the normal distribution (from the population), since it represents
 # only a portion of the population and is more prone to error
 
+# If the t statistic computed is more than the t critical value in a positive case, or if the negative t computed is less
+# than the t critical value, we reject the Null Hypothesis
+
 # CONDUCTING ONE SAMPLE T TEST
 
 import pandas as pd
+import math
 pd.set_option('display.max_column', 100)
 pd.set_option('display.max_row', 110)
 pd.set_option('expand_frame_repr', False)
 project_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course"
 path = project_dir+"/Data Files/Understanding Statistics/One Tail T Test.csv"
-#import scipy.stats as stats
-from scipy.stats import ttest_1samp
+import scipy.stats as stats
+# from scipy.stats import ttest_1samp
 
 df = pd.read_csv(path)
 df.head()
 
-df.mean = df['Overall Marks'].mean()
-t_statistic, p_value = ttest_1samp(df['Overall Marks'],70)
+df_mean = df['Overall Marks'].mean()
+df_std = df['Overall Marks'].std(ddof=1) # ddof=1 since this is a SD of sample
+df_newMean = 70
+df_sampleSize = len(df)
+
+tstastic = (df_newMean - df_mean) / (df_std / (math.sqrt(df_sampleSize) ))
+# From t table, the t critical value at 99 dof for 0.05 (two tail test) lies somewhere between 1.984 & 1.990. Since
+# the t statistic is less than the t critical value, we fail to reject the Null Hypothesis
+
+
+t_statistic, p_value = stats.ttest_1samp(df['Overall Marks'],70)
 p_value
 t_statistic
 
-# As the P value is greater than 0.05, we fail to reject the null hypothesis (sample mean = population mean)
+# Note that the p-value is a different measure than t critical value. If p-value is less than alpha (95% or 0.05) then we can reject the null
+# hypothesis. Since the p-value is greater than 0.05 we fail to reject Null Hypothesis  (sample mean ~ population mean)
 
 # CONDUCTING PAIRED T TEST
 
-# The mean of the sample is measured and compared before and after an intervention
+# The mean of the sample is measured and compared before and after an intervention, or behaves differently in two different conditions
+# Null Hypothesis: difference between two sample means is 0
+# Alternate Hypothesis: Significant difference exists between the two sample means (i.e. x1 - x2 <> 0)
 # t-value for Paired Sample = Mean (Difference of each casewise observation) / (SD of Difference / sqrt N)
 
 import pandas as pd
@@ -350,17 +366,78 @@ pd.set_option('expand_frame_repr', False)
 project_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course"
 path = project_dir+"/Data Files/Understanding Statistics/Data for paired t test.csv"
 import scipy.stats as stats
-from scipy.stats import ttest_rel
+import matplotlib.pyplot as plt
+
+# Lets look at the distribution of the histogram
+
+plt.subplot(2,2,1) # Subplot is used to plot multiple visualizations in a graph
+plt.hist(df['Errors using typewriter'], 10)
+plt.title('Errors using typewriter')
+plt.subplot(2,2,2)
+plt.hist(df['Errors using a computer'], 10)
+plt.title('Errors using  a computer')
+
+plt.subplot(2,2,3)
+plt.boxplot(df['Errors using typewriter'])
+plt.title('Errors using typewriter')
+plt.subplot(2,2,4)
+plt.boxplot(df['Errors using a computer'],)
+plt.title('Errors using  a computer')
+plt.show()
 
 df = pd.read_csv(path)
 df.head()
-t_statistic, p_value = ttest_rel(df['Errors using typewriter'], df['Errors using a computer'])
+t_statistic, p_value = stats.ttest_rel(df['Errors using typewriter'], df['Errors using a computer'])
 p_value
 t_statistic
 
 # As the P value is less than 0.05, we reject the null hypothesis and conclude that there is significant difference
 # errors  in typewrite vs computer
 
+# CONDUCTING A TWO SAMPLE T TEST
+
+# t = difference / standard error
+# Difference is the difference in their means, and the standard error is the combined standard error of the two samples
+# i.e. t = (x1 .bar - x2.bar) / sqrt((s1^2 / N1) + (s2^2 / N2))
+# DOF = N1 + N2 - 2 (since we have two samples here)
 
 
+import pandas as pd
+pd.set_option('display.max_column', 100)
+pd.set_option('display.max_row', 110)
+pd.set_option('expand_frame_repr', False)
+project_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course"
+path = project_dir+"/Data Files/Understanding Statistics/Data for 2 sample test.csv"
+import scipy.stats as stats
+import matplotlib.pyplot as plt
 
+df = pd.read_csv(path)
+df.head()
+
+plt.subplot(2,2,1)
+plt.hist(df['Hauz Khas'],10)
+plt.title('Hauz Khas')
+plt.xlabel('Hauz Khas Prices')
+
+plt.subplot(2,2,2)
+plt.boxplot(df['Hauz Khas'])
+plt.title('Hauz Khas')
+plt.xlabel('Hauz Khas Prices')
+
+plt.subplot(2,2,3)
+plt.hist(df['Defence Colony'])
+plt.title('Defense Colony')
+plt.xlabel('Defence Colony Prices')
+
+plt.subplot(2,2,4)
+plt.boxplot(df['Defence Colony'])
+plt.title('Defense Colony')
+plt.xlabel('Defence Colony Prices')
+
+plt.show()
+
+t_statistic, p_value = stats.ttest_ind(df['Hauz Khas'], df['Defence Colony'][0:14], equal_var=False)
+t_statistic
+p_value
+
+# As the p value is less than 0.05, we reject the null hypothesis.
