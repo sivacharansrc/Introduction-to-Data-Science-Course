@@ -436,8 +436,108 @@ plt.xlabel('Defence Colony Prices')
 
 plt.show()
 
-t_statistic, p_value = stats.ttest_ind(df['Hauz Khas'], df['Defence Colony'][0:14], equal_var=False)
+t_statistic, p_value = stats.ttest_ind(df['Hauz Khas'], df['Defence Colony'].dropna(), equal_var=False)
 t_statistic
 p_value
 
 # As the p value is less than 0.05, we reject the null hypothesis.
+
+# CHI SQUARED TEST
+
+# Chi Square is a uni directional test
+#  In many places we come across variables that are categorical. For such variables, calculating differences in mean is not a
+# an option. For such cases, chi square tests are performed by calculating the frequencies of occurrence of each categorical
+# variable, and see if the frequency of occurrence are significantly different
+# H0: There is no relationship between the two categorical variables
+# H1: There is significant relationship between the two categorical variables
+
+# Chi Square Statistic = SUMMATION((Observed Frequency - Expected Frequency)^2 / Expected Frequency)
+# Chi Square critical values are calculated using the degrees of freedom of the number of categorical variables (i.e. if 2 categorical
+# variables are involved, the dof = 2-1 (=1))
+
+# Running Chi Square test in python
+
+import pandas as pd
+import scipy.stats as stats
+pd.set_option('display.max_columns', 100)
+pd.set_option('display.max_rows', 100)
+pd.set_option('expand_frame_repr', False)
+project_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course"
+path = project_dir+"/Data Files/Understanding Statistics/chi_square.csv"
+df = pd.read_csv(path)
+df.head()
+
+t_statistic, p_value = stats.chisquare(f_obs=df['Observed'], f_exp=df['Expected'])
+p_value
+
+# Since the p_value is greater than 0.5, we fail to reject the Null Hypothesis. i.e. there is no statistical significance in the Observed vs Expected
+
+# CORRELATION
+
+# Used to determine the relationship between two variables
+# Correlation is denoted by r
+# Correlation can range from -1 to 1, where -1 indicates a strong negative correlation, 1 indicates strong positive correlation, and 0 indicates no
+# correlation
+# R^2 is known as the coefficient of determination and can be interpreted in terms of %
+
+# R (or person's r) = Covariance(X,Y) / SD X * SD Y
+
+df = pd.DataFrame({'x': [2.1,2.5,3.6,4.0],
+                  'y': [8,10,12,14]})
+xSTD = df['x'].std(ddof=1)
+ySTD = df['y'].std(ddof=1)
+
+
+# Covariance = (2.1 - 3.05)*(8-11) + (2.5 - 3.05)*(10-11) + (3.6 - 3.05)*(12-11) + (4.0 - 3.05)*(14-11) / n-1 (n-1 is used for sample, whereas N used for
+# population)
+# Covariance = 6.8 / 3 = 2.267
+2.267 / (xSTD * ySTD) # Calculating the Correlation = 0.9196011. This is a very high positive correlation
+
+import pandas as pd
+import numpy as np
+pd.set_option('display.max_columns',100)
+pd.set_option('display.max_rows',100)
+pd.set_option('expand_frame_repr',100)
+project_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course"
+path = project_dir+"/Data Files/Understanding Statistics/correlation.csv"
+df = pd.read_csv(path)
+df.head()
+
+df[['Item_Weight', 'Item_MRP']].corr() # This can also be calculated from df.iloc[:,1:3].corr()
+df[['Item_Weight', 'Item_Outlet_Sales']].corr()
+df[['Item_MRP', 'Item_Outlet_Sales']].corr() # MRP and Item Outlet Sales has a positive correlation
+
+# Let us visualize the results
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+
+df_corr = df.corr() # If the correlation is run for the entire df, then the correlation for all numeric variables are returned
+plt.figure(figsize=(10,10))
+sns.heatmap(df_corr, cmap='BuPu') # cmap is for specifying the color scheme of the correlation matrix
+
+# MODULE 2 PROBLEMS
+
+import pandas as pd
+import scipy.stats as stats
+
+df = pd.DataFrame({'x': [43, 21, 25, 42, 57, 59], 'y': [99, 65, 79, 75, 87, 81]})
+df.corr()
+
+# Does the data suggest that the knowledge of students increased post studying module?Answer using Paired T-Test.
+
+df = pd.DataFrame({'Pre-Module': [18, 21, 16, 22, 19, 24, 17,21,23,18,14,16,16,19,18,20,12,22,15,17],
+                                    'Post-Module': [22,25,17,24,16,29,20,23,19,20,15,15,18,26,18,24,18,25,19,16]})
+stats.ttest_rel(df['Pre-Module'], df['Post-Module'])
+# Since the p-value is less than 0.05, we reject the Null Hypothesis. i.e there is a significant improvement in the student performance
+
+# A sample of 100 voters are asked which of four candidates they would vote for in an election. The number supporting each candidate is given below:
+# Higgins (41),  Reardon (19),  White (24),  Charlton (16)
+# Do the data suggest that all candidates are equally popular?
+
+df = pd.DataFrame({'Observed': [41,19,24,16], 'Expected': [25,25,25,25]}, index=['Higgins', 'Reardon', 'White', 'Charlton'])
+df
+stats.chisquare(f_obs=df['Observed'], f_exp=df['Expected'])
+
+# Since  p-value are less than 0.05, we can reject the Null Hypothesis and state that the three candidates votes have a significant relationship. Also, the
+# results are not obtained by chance, and so the voters had specific preference for when voting, and that the four candidates are not equally preferred
