@@ -541,3 +541,58 @@ stats.chisquare(f_obs=df['Observed'], f_exp=df['Expected'])
 
 # Since  p-value are less than 0.05, we can reject the Null Hypothesis and state that the three candidates votes have a significant relationship. Also, the
 # results are not obtained by chance, and so the voters had specific preference for when voting, and that the four candidates are not equally preferred
+
+#### UNDERSTANDING STATISTICS EVALUATION TEST ####
+
+import pandas as pd
+pd.set_option('display.max_columns', 100)
+pd.set_option('display.max_rows', 100)
+pd.set_option('expand_frame_repr', False)
+import matplotlib.pyplot as plt
+#import seaborn as sns
+import scipy.stats as stats
+
+project_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course"
+path = project_dir+"/Data Files/Understanding Statistics/data_statistics.csv"
+df = pd.read_csv(path)
+
+# What is the median MRP of the items?
+df['Item_MRP'].median()
+
+# How to calculate the range of “Item_Outlet_Sales” variable of the dataframe (df)?
+
+df['Item_Outlet_Sales'].max() - df['Item_Outlet_Sales'].min()
+
+#Given below is the histogram of “Item_Visibility” variable. Select the correct option.
+
+plt.hist(df['Item_Visibility'], bins=120)
+plt.xlabel('Item Visibility')
+plt.ylabel('Frequency')
+plt.show()
+
+df['Item_Visibility'].mean()
+df['Item_Visibility'].median()
+df['Item_Visibility'].mode()
+
+# When the number of bins is increased, it clearly shows the higher occurrence for value 0. For a right skewed distribution, most of the time the mean
+# will be greater than the median and mode
+# Mean > Median > Mode
+
+# How to calculate the correlation between 'Item_MRP' and 'Item_Outlet_Sales' variable?
+df[['Item_MRP', 'Item_Outlet_Sales']].corr() # This is to get the correlation matrix
+df['Item_MRP'].corr(df['Item_Outlet_Sales']) # Alternate way to get the correlation or the exact correlation value without any matrix
+
+# Select the correct statements:
+
+# Item_Visibility and Item_Outlet_Sales are negatively correlated - TRUE
+# Item_MRP and Item_Weight are negatively correlated - False
+# Item_Weight and Item_Outlet_Sales are positively correlated - True
+# Outlet_Establishment_Year and Item_Outlet_Sales are negatively correlated - True
+df[['Item_Visibility', 'Item_Outlet_Sales', 'Item_MRP', 'Item_Weight', 'Outlet_Establishment_Year']].corr()
+
+# Consider the population mean of Item_MRP is 140. So, can we say that the mean of Item_MRP in the given sample (dataframe)
+# is similar to the population mean? (Make use of one sample t-test)
+
+t_statistic, p_value = stats.ttest_1samp(df['Item_MRP'],140)
+# p_value (0.1411) is greater than 0.05. Therefore we fail to reject  reject the null hypothesis, and the sample mean is not significantly differert from
+# the population mean, and that any change that occurs is by chance
