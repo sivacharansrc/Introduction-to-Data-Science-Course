@@ -365,5 +365,84 @@ df.head
 df['Age Group'].value_counts().plot(kind='bar')
 df.groupby('Age Group').size().plot(kind='bar')
 
+# BASICS OF MODEL BUILDING
+
+# Three steps involved in model building:
+#           Algorithm Selection
+#           Training Model
+#           Prediction or Scoring
+
+# Chart for Algorithm Selection
+# IF Dependent Variable exists, then Supervised Learning, else Unsupervised Learning
+#           If Supervised Learning, Is dependent Variable continuous?
+#                   If yes, then regression problem (Simple Linear Regression, Multiple Regression)
+#                   If not, then classification problem (Logistic Regression, Decision Tree, Random Forest)
+#           If Unsupervised, then Clustering problem (k-means, spectral clustering)
 
 
+# LINEAR REGRESSIONS:
+# r square is a measure of how good the model is
+# r square = Sum of Square of Regression / Sum of Square of Total Variance (i.e. Sum((y hat - actual mean)^2) / Sum((y - actual mean)^2)
+# r square can also be calculated from 1 - {Sum((y hat - y)^2) / Sum((y - actual mean)^2)}
+# r square always lies between 0 and 1
+# RMSE is one of the most popular metric for scoring regression models
+
+# IMPLEMENTING LINEAR REGRESSION IN PYTHON
+
+import pandas as pd
+pd.set_option('display.max_columns', 100)
+pd.set_option('display.max_rows', 100)
+pd.set_option('expand_frame_repr', False)
+import numpy as np
+import matplotlib.pyplot as plt
+
+proj_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/"
+path = proj_dir + "Data Files/Predictive Modeling and Machine Learning/linear_regression_train.csv"
+df = pd.read_csv(path)
+
+df.dtypes
+df.head()
+df.shape
+
+
+# In order for linear regression to run, all the variables should be numerical
+# Categorical variables can be converted to numerical using the get_dummies function in pandas
+# Creating dummies before split to avoid any conflicts between dummy variable creation
+
+df_backup = df
+df = pd.get_dummies(df,)
+
+
+df_train = df[0:8000]
+df_test = df[8000:]
+
+x_train = df_train.drop('Item_Outlet_Sales', axis=1)
+y_train = df_train['Item_Outlet_Sales']
+x_test = df_test.drop('Item_Outlet_Sales', axis=1)
+true_pred = df_test['Item_Outlet_Sales']
+
+# Building a linear regression model
+from sklearn.linear_model import LinearRegression
+lreg = LinearRegression()
+
+
+# For linear regressions to run properly, there should not be any missing values. For this case, let us fill NA with 0
+x_train.fillna(0, inplace=True)
+x_test.fillna(0, inplace=True)
+
+lreg.fit(x_train, y_train)
+pred = lreg.predict(x_test)
+
+# Performance of the model:
+
+lreg.score(x_test, true_pred)  # r square is 0.4029
+lreg.score(x_train, y_train)  # r square is 0.6497
+# From the above score test, r square has dropped significantly. The reason can be that the model  is
+# over fitted for train data set, or the test data is not an actual representation of train
+
+rmse_test = np.sqrt(np.mean(np.power((np.array(true_pred) - np.array(pred)), 2)))
+rmse_train = np.sqrt(np.mean(np.power((np.array(y_train) - np.array(lreg.predict(x_train))), 2)))
+# The RMSE results also very similar to r square. i.e. either there is over fitting or test is not representing train
+
+pd.DataFrame.boxplot(df1)
+pd.scatter_matrix(df1)
