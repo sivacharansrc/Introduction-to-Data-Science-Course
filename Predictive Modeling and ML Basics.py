@@ -256,5 +256,114 @@ df.fillna(0)
 # To impute a numerical variable with value other than zero
 df['Age'].fillna(df['Age'].mean())
 
+# OUTLIER TREATMENT
+# Uni-variate Outliers: Analyze one variable for outliers - can be identified using box plot
+# Bi-variate Outliers: Analyze two variables for outliers  - can be identified using scatter plot
+
+# Identifying Outliers:
+# Value less than Q1 - 1.5 IQR or greater than Q3 + 1.5 IQR
+# IQR is the Inter Quartile Range which is Q3 - Q1
+
+# Treating Outliers:
+# Deleting Outliers
+# Transforming and Binning Values
+# Imputing Outliers similar to missing values
+# Treat the outliers separately
+
+import pandas as pd
+pd.set_option('display.max_columns', 100)
+pd.set_option('display.max_rows', 100)
+pd.set_option('expand_frame_repr', 100)
+
+
+proj_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/"
+path = proj_dir + "Data Files/Predictive Modeling and Machine Learning/data.csv"
+df = pd.read_csv(path)
+
+pd.DataFrame.boxplot(df)
+df['Age'].plot.box()
+df['Fare'].plot.box()
+
+df.plot.scatter('Age', 'Fare')
+pd.scatter_matrix(df)
+
+# Removing Outliers from the data set
+# From the above scatter plot for Age and Fare, there are two data points that appear as outlier. One way to remove
+# the outlier is to filter the data where the fare is greater than 300
+df1 = df[df['Fare'] < 300]
+df1.plot.scatter('Age', 'Fare')
+
+# Replacing outliers in Age variable with the mean
+df1.loc[df['Age'] > 65, 'Age'] = df1['Age'].mean()  # Outliers imputed with mean. They can also be done with median
+# df1.loc[df['Age'] > 65, 'Age'] = df1['Age'].median()
+# np.mean(df['Age']) also gives the mean.. np is from numpy package
+
+df1['Age'].plot.box()
+
+# Variable Transformation:
+
+# Replace a variable with some function of that particular variable (i.e. replacing with log)
+# Is a process in which we change the distribution or relationship of a variable with others
+
+# Why used
+# To change the scale of the variable. For instance, when we have 20 variables of which 17 are in Km, and 3 are in mile
+# then the change in scale will create some issues. To bring the scale the same across the column, variable
+# transformation are performed
+
+# Transforming non linear relationships to linear relationships as linear relationships are easier to predict
+
+# Create a symmetric distribution from a skewed distribution, as symmetric or normally distributed data
+# are required for many model predictions etc
+
+# Common methods of variable transformation
+
+# Taking log of the variables reduces the right skewness of the variable
+# Square Root - Used for right skewed variable, but applicable only for positive values
+# Cube Root - Used for right skewed variable for both positive and negative variables
+# Binning - convert continuous variable to categorical variable
+
+import pandas as pd
+pd.set_option('display.max_columns', 100)
+pd.set_option('display.max_rows', 100)
+pd.set_option('expand_frame_repr', 100)
+import numpy as np
+import matplotlib.pyplot as plt
+
+proj_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/"
+path = proj_dir + "Data Files/Predictive Modeling and Machine Learning/data.csv"
+df = pd.read_csv(path)
+
+df['Age'].plot.hist()
+
+# Let us analyze the results of different transformations:
+
+plt.subplot(221)
+df['Age'].plot.hist()
+plt.title = 'Age Histogram'
+plt.subplot(222)
+np.log(df['Age']).plot.hist()  # Taking log is completely changing the skewness to the left. Not very good
+plt.title = 'Log transformation of Age Histogram'
+plt.subplot(223)
+np.sqrt(df['Age']).plot.hist()
+plt.title = 'SQRT transformation of Age Histogram'
+plt.subplot(224)
+np.power(df['Age'], 1/3).plot.hist()
+plt.title = 'Cube Root transformation of Age Histogram'
+plt.show()
+
+# Of all the above transformation, the sqrt gives better symmetry
+
+# Transformation by Binning:
+df['Age'].plot.hist()
+
+# Let us consider from the above data set that people with age 0-15 are children, and the rest are adults
+bins = [0, 15, 80]
+group = ['child', 'adult']
+df['Age Group'] = pd.cut(df['Age'], bins, labels=group)
+df.head
+# df['Age Group'].isnull().value_counts()
+df['Age Group'].value_counts().plot(kind='bar')
+df.groupby('Age Group').size().plot(kind='bar')
+
 
 
