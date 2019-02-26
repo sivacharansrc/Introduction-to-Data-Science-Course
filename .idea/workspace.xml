@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8e07547-f0cd-4e69-847d-8faa0f8efaf9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data Files/Predictive Modeling and Machine Learning/titanic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Introduction to Data Science Course.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Introduction to Data Science Course.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Predictive Modeling and ML Basics.py" beforeDir="false" afterPath="$PROJECT_DIR$/Predictive Modeling and ML Basics.py" afterDir="false" />
     </list>
@@ -15,12 +21,12 @@
     <favorites_list name="Introduction to Data Science Course" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="447" column="22" selection-start-line="447" selection-start-column="22" selection-end-line="447" selection-end-column="22" />
+            <state relative-caret-position="308">
+              <caret line="528" column="86" selection-start-line="528" selection-start-column="86" selection-end-line="528" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -45,6 +51,7 @@
       <find>frame</find>
       <find>corr</find>
       <find>plt.</find>
+      <find>pd.cu</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -61,14 +68,16 @@
         <option value="$PROJECT_DIR$/Basic Python for Data Science.py" />
         <option value="$PROJECT_DIR$/Understanding Statistics for Data Science.py" />
         <option value="$PROJECT_DIR$/Understanding Statistics Coding Challenge.py" />
+        <option value="$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/data_prep_function.py" />
+        <option value="$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/pyScript.py" />
         <option value="$PROJECT_DIR$/Predictive Modeling and ML Basics.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="997" />
-    <option name="width" value="1563" />
-    <option name="height" value="1032" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="993" />
+    <option name="width" value="1567" />
+    <option name="height" value="1037" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -96,6 +105,20 @@
               <item name="Data Files" type="462c0819:PsiDirectoryNode" />
               <item name="Predictive Modeling and Machine Learning" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Introduction to Data Science Course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BigMartSalesPredictions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Introduction to Data Science Course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BigMartSalesPredictions" type="462c0819:PsiDirectoryNode" />
+              <item name="pyScript" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Introduction to Data Science Course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BigMartSalesPredictions" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -105,8 +128,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BigMartSalesPredictions" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -117,12 +140,12 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course\Data Files\Predictive Modeling and Machine Learning" />
       <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course\Data Files\Understanding Statistics" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -205,10 +228,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="833" y="0" width="1304" height="861" extended-state="0" />
+    <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.25197473" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.18987341" />
       <window_info id="Structure" order="1" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info id="Favorites" order="2" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -219,9 +242,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963988" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.31855956" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.33994335" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.33240998" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5037975" side_tool="true" weight="0.4099723" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.49620253" visible="true" weight="0.407932" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.49620253" visible="true" weight="0.3462604" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -290,16 +313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Understanding Statistics Coding Challenge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="e#28#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Understanding Statistics for Data Science.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -307,10 +320,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/data_prep_function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" lean-forward="true" selection-start-column="29" selection-end-column="29" />
+          <folding>
+            <element signature="e#945#1023#0" />
+            <element signature="e#3589#3730#0" />
+            <element signature="e#4086#4231#0" />
+            <element signature="e#4728#4794#0" />
+            <element signature="e#6826#6971#0" />
+            <element signature="e#7000#7145#0" />
+            <element signature="e#7175#7320#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/pyScript.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="290" selection-start-line="290" selection-end-line="290" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Understanding Statistics Coding Challenge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="e#28#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="447" column="22" selection-start-line="447" selection-start-column="22" selection-end-line="447" selection-end-column="22" />
+        <state relative-caret-position="308">
+          <caret line="528" column="86" selection-start-line="528" selection-start-column="86" selection-end-line="528" selection-end-column="86" />
         </state>
       </provider>
     </entry>

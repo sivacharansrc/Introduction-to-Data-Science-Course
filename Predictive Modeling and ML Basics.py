@@ -446,3 +446,85 @@ rmse_train = np.sqrt(np.mean(np.power((np.array(y_train) - np.array(lreg.predict
 
 pd.DataFrame.boxplot(df1)
 pd.scatter_matrix(df1)
+
+# UNDERSTANDING LOGISTIC REGRESSION:
+
+# Logistic regression is basically a sigmoid function 1 / (1 + e^-yhat)
+# Logistic regression is used for Yes / No classification. It determines whether a an outcome can occur or not, given the possibility of X
+# Cost Function = -y (log(yhat)) - (1-y) log(1-yhat)
+
+import pandas as pd
+pd.set_option('display.max_rows', 100)
+pd.set_option('display.max_columns', 100)
+pd.set_option('expand_frame_repr', False)
+import numpy as np
+import matplotlib.pyplot as plt
+
+proj_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/"
+path = proj_dir + "Data Files/Predictive Modeling and Machine Learning/titanic.csv"
+df = pd.read_csv(path)
+
+df.head()
+df['Survived'].value_counts()
+df = pd.get_dummies(df)
+df.fillna(0, inplace=True)
+df.shape
+train_data = df[0:699]
+test_data = df[700:890]
+x_train = train_data.drop('Survived', axis=1)
+y_train = train_data['Survived']
+x_test = test_data.drop('Survived', axis=1)
+y_test = test_data['Survived']
+
+from sklearn.linear_model import LogisticRegression
+logreg = LogisticRegression()
+
+logreg.fit(x_train, y_train)
+predictions = logreg.predict(x_test)
+
+logreg.score(x_test, y_test)
+logreg.score(x_train, y_train)
+
+# The accuracy has dropped significantly from 92 to 82. The major reason might be we are using the name of the passengers.
+# Let us try rerun the logistic regression by removing the passenger name
+
+df['Survived'].value_counts()
+df['Cabin_Fixed'] = df['Cabin'].astype(str).str[0]  # To generalize the Cabin rather than having all seat number
+df['Cabin_Fixed'][df['Cabin'].isnull()] = df['Cabin']
+df.Fare.plot.hist(bins=20)  # To see if having a fare group can have an impact on the overall model
+bins = [0, 20, 250, 500]
+group = ['low', 'med', 'high']
+df['Fare_Group'] = pd.cut(df['Fare'], bins, labels=group)
+df.head()
+pd.crosstab(df['Cabin_Fixed'], df['Fare_Group'])
+
+
+df.drop(['Name', 'Ticket', 'Cabin'], axis=1, inplace=True)
+df = pd.get_dummies(df)
+df.fillna(0, inplace=True)
+df.shape
+train_data = df[0:699]
+test_data = df[700:890]
+x_train = train_data.drop('Survived', axis=1)
+y_train = train_data['Survived']
+x_test = test_data.drop('Survived', axis=1)
+y_test = test_data['Survived']
+
+from sklearn.linear_model import LogisticRegression
+logreg = LogisticRegression()
+
+logreg.fit(x_train, y_train)
+predictions = logreg.predict(x_test)
+
+logreg.score(x_test, y_test)  # 0.81
+logreg.score(x_train, y_train)  # 0.79
+
+accuracy_df = pd.DataFrame({'Actual_Values': y_test, 'Predicted_Values': predictions})
+pd.crosstab(accuracy_df['Actual_Values'], accuracy_df['Predicted_Values'])
+
+# Though the overall model did not improve, the test and train are more or less close which means that the model is now
+# more generalized, rather than over fitting the training data
+
+# Additional Reference: https://towardsdatascience.com/building-a-logistic-regression-in-python-step-by-step-becd4d56c9c8
+# https://towardsdatascience.com/fine-tuning-a-classifier-in-scikit-learn-66e048c21e65
+
