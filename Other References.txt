@@ -1,1 +1,5 @@
 More information on Chi Square Test: https://pythonfordatascience.org/chi-square-test-of-independence-python/
+
+Logistic Regression:
+https://towardsdatascience.com/fine-tuning-a-classifier-in-scikit-learn-66e048c21e65
+https://towardsdatascience.com/building-a-logistic-regression-in-python-step-by-step-becd4d56c9c8
