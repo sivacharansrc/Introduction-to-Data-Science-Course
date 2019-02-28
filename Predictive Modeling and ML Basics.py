@@ -528,3 +528,40 @@ pd.crosstab(accuracy_df['Actual_Values'], accuracy_df['Predicted_Values'])
 # Additional Reference: https://towardsdatascience.com/building-a-logistic-regression-in-python-step-by-step-becd4d56c9c8
 # https://towardsdatascience.com/fine-tuning-a-classifier-in-scikit-learn-66e048c21e65
 
+# UNDERSTANDING DECISION TREES:
+
+# Decision tree is nothing but slicing data by asking questions at each point. The question may start more generic to more focused
+# as we go deeper in to the node
+
+# The node at which the first decision split occurs is called the Root Node, and the last node is called the terminal nodes (or leaf node).
+# The number of decision branches required to arrive at the terminal node is called the depth of the tree
+
+# Splitting:
+# The effectiveness of the split relies on how good the first node split acts to divide the data in to event success vs event failure. For instance
+# where there are 10 girls (5 in class 9 and 5 in class 10), and 20 boys (10 in each class) in a school, and let us assume that all boys play cricket
+# and no girls play cricket. If the first split is made at Gender level, then the model would be more precisely able to segregate the event of
+# success vs failure (0 vs 100%) vs the first split taken by class (50% vs 50%)
+
+# The purity of the split is measured on gini index. Gini index is applicable to datasets with only success vs failure outcomes
+# i.e. two classes of dependent variable
+
+# The purity of the split does not always correspond to accuracy of the model in splitting the model as Success vs Failure
+# Suppose if all girls and boys play cricket, then the split by gender will actually divide the success outcomes in to two branches
+# In this particular case, the gini index will be the max possible value (i.e 1) but the success events are split between the two nodes
+
+
+import pandas as pd
+pd.set_option('display.max_rows', 100)
+pd.set_option('display.max_columns', 100)
+pd.set_option('expand_frame_repr', False)
+import numpy as np
+import matplotlib.pyplot as plt
+
+proj_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/"
+path = proj_dir + "Data Files/Predictive Modeling and Machine Learning/decision_tree.csv"
+df = pd.read_csv(path)
+
+# Segregating independent and dependent variables:
+
+
+
