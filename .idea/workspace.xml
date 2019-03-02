@@ -21,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
-              <caret line="565" lean-forward="true" selection-start-line="565" selection-end-line="565" />
+              <caret line="588" lean-forward="true" selection-start-line="588" selection-end-line="588" />
             </state>
           </provider>
         </entry>
@@ -82,6 +82,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -118,7 +119,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -226,7 +226,7 @@
     <frame x="833" y="0" width="1304" height="861" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" weight="0.23301739" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" weight="0.23283346" />
       <window_info id="Structure" order="1" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info id="Favorites" order="2" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -237,7 +237,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963988" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.31855956" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.33994335" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.33946252" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5037975" side_tool="true" weight="0.4099723" />
       <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.49620253" visible="true" weight="0.34560907" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -351,7 +351,7 @@
     <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
-          <caret line="565" lean-forward="true" selection-start-line="565" selection-end-line="565" />
+          <caret line="588" lean-forward="true" selection-start-line="588" selection-end-line="588" />
         </state>
       </provider>
     </entry>

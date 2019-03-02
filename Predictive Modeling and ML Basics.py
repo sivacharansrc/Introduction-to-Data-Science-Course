@@ -556,12 +556,35 @@ pd.set_option('display.max_columns', 100)
 pd.set_option('expand_frame_repr', False)
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
 
 proj_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/"
 path = proj_dir + "Data Files/Predictive Modeling and Machine Learning/decision_tree.csv"
 df = pd.read_csv(path)
+# Note that the decision tree data set is the same as the titanic data set, but is cleaned and converted all strings to numeric data
+df.head()
 
-# Segregating independent and dependent variables:
+# Seperating independent and dependent variables
 
+x = df.drop('Survived', axis=1)
+y = df['Survived']
+
+x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=1, stratify=y)
+# The random state argument is similar to seed, and stratify is to make sure the y variable is split in an equal proportion in test and train
+
+# Checking proportion of y in train and test to validate the stratify command:
+
+y_train.value_counts() / len(y_train)
+y_test.value_counts() / len(y_test)
+
+clf = DecisionTreeClassifier()
+clf.fit(x_train, y_train)
+clf.score(x_train, y_train)
+
+clf.score(x_test, y_test)
+
+# The prediction is not that good as the there is a huge drop between the train and the test data. Either the model is overfitted, or the test
+# is not a good resemblance of train data
 
 
