@@ -587,4 +587,62 @@ clf.score(x_test, y_test)
 # The prediction is not that good as the there is a huge drop between the train and the test data. Either the model is overfitted, or the test
 # is not a good resemblance of train data
 
+# UNDERSTANDING K MEANS:
+
+# Unsupervised Learning: There is no target variable in this case. The data is being accessed by the algorithm, and then categorized depending
+# on the similarities between different points.
+
+# Steps in K-means clustering:
+#   Assigns clusters randomly with the available data points in a plant
+#   Calculates the centroid for each of the clusters
+#   Now each points are accessed the distance from all the available centroids, and are then assigned the particular cluster to which they are close to
+#   The above steps are repeated until:
+#        The number of iterations reach the specified limit
+#        The centroid points do not change any more
+#        The individual points after many iterations do not change the clusters
+
+import pandas as pd
+pd.set_option('display.max_rows', 100)
+pd.set_option('display.max_columns', 100)
+pd.set_option('expand_frame_repr', False)
+#import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.cluster import KMeans
+
+proj_dir = "C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/"
+path = proj_dir + "Data Files/Predictive Modeling and Machine Learning/student_evaluation.csv"
+df = pd.read_csv(path)
+df.head()
+df.shape
+
+df.isnull().sum()  # To check for null values within the data set
+# There are no null values in the data set
+
+df.describe()
+
+kmeans = KMeans(n_clusters=2)  # We can check with two clusters
+kmeans.fit(df)
+pred = kmeans.predict(df)
+pred  # (pred is a numpy array)
+pd.Series(pred).value_counts()
+
+kmeans.inertia_  # Either way of calculating the Squared Sum of Errors
+kmeans.score(df)  # Either way of calculating the Squared Sum of Errors
+# The clusters with the lowest SSE value has the best representation of the clusters
+# We need to try different number of clusters, with different iterations to arrive at the best cluster segmentation
+
+SSE = []
+for cluster in range(1, 21):
+    kmeans = KMeans(n_jobs=-1, n_clusters=cluster)
+    kmeans.fit(df)
+    SSE.append(kmeans.inertia_)
+
+clusterResults = pd.DataFrame({'Cluster': range(1, 21), 'SSE': SSE})
+clusterResults
+
+plt.figure(figsize=(12, 6))
+plt.plot(clusterResults['Cluster'], clusterResults['SSE'], marker='o')
+# From the above plot, we can infer that from 6 clusters onwards, the SSE decrease is marginal. Though this is
+# not a accurate test, we can still conclude that the optimal number of clusters is 6 to 7
 

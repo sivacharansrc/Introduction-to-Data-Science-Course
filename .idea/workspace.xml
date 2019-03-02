@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8e07547-f0cd-4e69-847d-8faa0f8efaf9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Data Files/Predictive Modeling and Machine Learning/student_evaluation.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Predictive Modeling and ML Basics.py" beforeDir="false" afterPath="$PROJECT_DIR$/Predictive Modeling and ML Basics.py" afterDir="false" />
@@ -21,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
-              <caret line="588" lean-forward="true" selection-start-line="588" selection-end-line="588" />
+              <caret line="648" lean-forward="true" selection-start-line="648" selection-end-line="648" />
             </state>
           </provider>
         </entry>
@@ -135,12 +136,12 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course\Data Files\Predictive Modeling and Machine Learning" />
       <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course\Data Files\Understanding Statistics" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -226,7 +227,7 @@
     <frame x="833" y="0" width="1304" height="861" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" weight="0.23283346" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.23222749" />
       <window_info id="Structure" order="1" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info id="Favorites" order="2" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -237,7 +238,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963988" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.31855956" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.33946252" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3385269" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5037975" side_tool="true" weight="0.4099723" />
       <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.49620253" visible="true" weight="0.34560907" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -351,7 +352,7 @@
     <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
-          <caret line="588" lean-forward="true" selection-start-line="588" selection-end-line="588" />
+          <caret line="648" lean-forward="true" selection-start-line="648" selection-end-line="648" />
         </state>
       </provider>
     </entry>
