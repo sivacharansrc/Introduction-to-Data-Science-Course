@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8e07547-f0cd-4e69-847d-8faa0f8efaf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Final Coding Challenge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modeling_Coding_Challenge.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modeling_Coding_Challenge_Solution.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modelling Coding Challenge.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic Python for Data Science.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basic Python for Data Science.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Predictive Modeling and ML Basics.py" beforeDir="false" afterPath="$PROJECT_DIR$/Predictive Modeling and ML Basics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modeling_Coding_Challenge.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Modeling_Coding_Challenge.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,13 +18,32 @@
     <favorites_list name="Introduction to Data Science Course" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Modelling Coding Challenge.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Modeling_Coding_Challenge_Solution.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -65,16 +83,16 @@
         <option value="$PROJECT_DIR$/Predictive Modeling and ML Basics.py" />
         <option value="$PROJECT_DIR$/Final Coding Challenge.py" />
         <option value="$PROJECT_DIR$/Titanic_Coding_Challenge.ipynb" />
-        <option value="$PROJECT_DIR$/Modeling_Coding_Challenge.ipynb" />
         <option value="$PROJECT_DIR$/Basic Python for Data Science.py" />
+        <option value="$PROJECT_DIR$/Modeling_Coding_Challenge.ipynb" />
+        <option value="$PROJECT_DIR$/Modelling Coding Challenge.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="273" />
-    <option name="y" value="-18" />
-    <option name="width" value="1565" />
-    <option name="height" value="1034" />
+    <option name="x" value="997" />
+    <option name="width" value="1563" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -84,6 +102,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,13 +139,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../BigMartSalesPredictions" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -137,13 +155,13 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course" />
       <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course\Data Files\Predictive Modeling and Machine Learning" />
       <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course\Data Files\Understanding Statistics" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -226,9 +244,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
+    <frame x="-8" y="-8" width="2152" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.18607596" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.1859035" />
       <window_info id="Structure" order="1" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info id="Favorites" order="2" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -239,9 +258,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963988" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.31855956" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.33795014" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.33795014" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5037975" side_tool="true" weight="0.4099723" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49620253" weight="0.34764543" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.49620253" visible="true" weight="0.34764543" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -337,32 +356,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
+    <entry file="file://$PROJECT_DIR$/Titanic_Coding_Challenge.ipynb" />
+    <entry file="file://$PROJECT_DIR$/Final Coding Challenge.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="165" column="9" selection-start-line="165" selection-start-column="3" selection-end-line="165" selection-end-column="9" />
+        <state relative-caret-position="500">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Titanic_Coding_Challenge.ipynb" />
     <entry file="file://$PROJECT_DIR$/Modeling_Coding_Challenge.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="3" />
+          <selected id="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Basic Python for Data Science.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="18">
           <caret line="284" column="77" selection-start-line="284" selection-start-column="77" selection-end-line="284" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final Coding Challenge.py">
+    <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        <state>
+          <caret line="127" column="71" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modeling_Coding_Challenge_Solution.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modelling Coding Challenge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
         </state>
       </provider>
     </entry>
