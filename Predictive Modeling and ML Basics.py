@@ -641,8 +641,34 @@ for cluster in range(1, 21):
 clusterResults = pd.DataFrame({'Cluster': range(1, 21), 'SSE': SSE})
 clusterResults
 
-plt.figure(figsize=(12, 6))
+# plt.figure(figsize=(12, 6))
 plt.plot(clusterResults['Cluster'], clusterResults['SSE'], marker='o')
 # From the above plot, we can infer that from 6 clusters onwards, the SSE decrease is marginal. Though this is
 # not a accurate test, we can still conclude that the optimal number of clusters is 6 to 7
 
+# Since KMeans is based on the distance between two points, it is important to scale the datasets
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+
+df_scaled = scaler.fit_transform(df)
+
+SSE_Scaled = []
+
+for cluster in range(1, 21):
+    kmeans = KMeans(n_jobs=-1, n_clusters=cluster)
+    kmeans.fit(df_scaled)
+    SSE_Scaled.append(kmeans.inertia_)
+
+scaledClusterResults = pd.DataFrame({'Cluster': range(1, 21), 'SSE_Scaled': SSE_Scaled})
+plt.plot(scaledClusterResults['Cluster'], scaledClusterResults['SSE_Scaled'], marker='o')
+
+# From the graph, it is can be inferred that the optimal number of clusters can be around 4 or 5
+
+kmeans = KMeans(n_clusters=4, n_jobs=-1)
+kmeans.fit(df_scaled)
+pred = kmeans.predict(df_scaled)
+
+df['Cluster'] = pred
+
+df[df['Cluster'] == 2]
+df['pred']

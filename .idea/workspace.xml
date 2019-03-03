@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8e07547-f0cd-4e69-847d-8faa0f8efaf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Data Files/Predictive Modeling and Machine Learning/student_evaluation.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Final Coding Challenge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modeling_Coding_Challenge.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basic Python for Data Science.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basic Python for Data Science.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Predictive Modeling and ML Basics.py" beforeDir="false" afterPath="$PROJECT_DIR$/Predictive Modeling and ML Basics.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,22 +19,13 @@
     <favorites_list name="Introduction to Data Science Course" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="648" lean-forward="true" selection-start-line="648" selection-end-line="648" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -48,6 +41,10 @@
       <find>corr</find>
       <find>plt.</find>
       <find>pd.cu</find>
+      <find>crosst</find>
+      <find>pivot</find>
+      <find>groupb</find>
+      <find>group</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -61,19 +58,23 @@
         <option value="$PROJECT_DIR$/Basic Python for Data Science/First Python Code.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
-        <option value="$PROJECT_DIR$/Basic Python for Data Science.py" />
         <option value="$PROJECT_DIR$/Understanding Statistics for Data Science.py" />
         <option value="$PROJECT_DIR$/Understanding Statistics Coding Challenge.py" />
         <option value="$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/data_prep_function.py" />
         <option value="$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/pyScript.py" />
         <option value="$PROJECT_DIR$/Predictive Modeling and ML Basics.py" />
+        <option value="$PROJECT_DIR$/Final Coding Challenge.py" />
+        <option value="$PROJECT_DIR$/Titanic_Coding_Challenge.ipynb" />
+        <option value="$PROJECT_DIR$/Modeling_Coding_Challenge.ipynb" />
+        <option value="$PROJECT_DIR$/Basic Python for Data Science.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="997" />
-    <option name="width" value="1563" />
-    <option name="height" value="1032" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="273" />
+    <option name="y" value="-18" />
+    <option name="width" value="1565" />
+    <option name="height" value="1034" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -83,7 +84,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,12 +120,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../BigMartSalesPredictions" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -136,12 +137,13 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course" />
       <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course\Data Files\Predictive Modeling and Machine Learning" />
       <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course\Data Files\Understanding Statistics" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -224,10 +226,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="833" y="0" width="1304" height="861" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.23222749" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.18607596" />
       <window_info id="Structure" order="1" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info id="Favorites" order="2" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -238,9 +239,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963988" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.31855956" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3385269" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.33795014" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5037975" side_tool="true" weight="0.4099723" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.49620253" visible="true" weight="0.34560907" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49620253" weight="0.34764543" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -302,40 +303,10 @@
     <entry file="file://$PROJECT_DIR$/Data Files/Understanding Statistics/One Tail T Test.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Basic Python for Data Science.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="284" column="81" selection-start-line="284" selection-start-column="72" selection-end-line="284" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Understanding Statistics for Data Science.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="580" column="27" selection-start-line="580" selection-start-column="23" selection-end-line="580" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/data_prep_function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" lean-forward="true" selection-start-column="29" selection-end-column="29" />
-          <folding>
-            <element signature="e#945#1023#0" />
-            <element signature="e#3589#3730#0" />
-            <element signature="e#4086#4231#0" />
-            <element signature="e#4728#4794#0" />
-            <element signature="e#6826#6971#0" />
-            <element signature="e#7000#7145#0" />
-            <element signature="e#7175#7320#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/pyScript.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="290" selection-start-line="290" selection-end-line="290" />
         </state>
       </provider>
     </entry>
@@ -349,10 +320,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/data_prep_function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret column="29" lean-forward="true" selection-start-column="29" selection-end-column="29" />
+          <folding>
+            <element signature="e#945#1023#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/pyScript.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="167" column="43" selection-start-line="167" selection-start-column="38" selection-end-line="167" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="648" lean-forward="true" selection-start-line="648" selection-end-line="648" />
+        <state relative-caret-position="127">
+          <caret line="165" column="9" selection-start-line="165" selection-start-column="3" selection-end-line="165" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Titanic_Coding_Challenge.ipynb" />
+    <entry file="file://$PROJECT_DIR$/Modeling_Coding_Challenge.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Basic Python for Data Science.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="284" column="77" selection-start-line="284" selection-start-column="77" selection-end-line="284" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final Coding Challenge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>

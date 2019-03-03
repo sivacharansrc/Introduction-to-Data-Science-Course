@@ -282,7 +282,7 @@ mydata = pd.read_csv(project_dir+"/Data Files/Basic Python for Data Science/data
 # print the number of rows and number of columns of mydata
 mydata.shape
 mydata.head()
-# assign a variable 'target' with the 'Loan_Status' feature from mydata dataframe
+# assign a variable 'target' with the 'Loan_Status' feature from mydata data frame
 target = mydata['Loan_Status']
 
 # print the datatype of ApplicantIncome feature
