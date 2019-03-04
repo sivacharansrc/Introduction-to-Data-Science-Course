@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8e07547-f0cd-4e69-847d-8faa0f8efaf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +19,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            <state relative-caret-position="68">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12">
+              <caret line="235" column="9" selection-start-line="235" selection-start-column="3" selection-end-line="235" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -57,6 +65,7 @@
       <find>pivot</find>
       <find>groupb</find>
       <find>group</find>
+      <find>dropna</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -74,20 +83,20 @@
         <option value="$PROJECT_DIR$/Understanding Statistics Coding Challenge.py" />
         <option value="$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/data_prep_function.py" />
         <option value="$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/pyScript.py" />
-        <option value="$PROJECT_DIR$/Predictive Modeling and ML Basics.py" />
         <option value="$PROJECT_DIR$/Final Coding Challenge.py" />
         <option value="$PROJECT_DIR$/Titanic_Coding_Challenge.ipynb" />
         <option value="$PROJECT_DIR$/Basic Python for Data Science.py" />
         <option value="$PROJECT_DIR$/Modeling_Coding_Challenge.ipynb" />
         <option value="$PROJECT_DIR$/Modelling Coding Challenge.py" />
+        <option value="$PROJECT_DIR$/Predictive Modeling and ML Basics.py" />
         <option value="$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="996" />
-    <option name="width" value="1564" />
-    <option name="height" value="1033" />
+    <option name="x" value="997" />
+    <option name="width" value="1563" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -125,7 +134,7 @@
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../BigMartSalesPredictions" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Debugger" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -227,9 +236,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2152" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.1859035" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.1859035" />
       <window_info id="Structure" order="1" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info id="Favorites" order="2" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -242,7 +250,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.31855956" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.33795014" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5037975" side_tool="true" weight="0.4099723" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49620253" visible="true" weight="0.34764543" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.49620253" visible="true" weight="0.34764543" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -360,13 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="127" column="71" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Modelling Coding Challenge.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -390,10 +391,17 @@
     <entry file="file://$PROJECT_DIR$/Classification Project/input/Data Description.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="235" column="9" selection-start-line="235" selection-start-column="3" selection-end-line="235" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state relative-caret-position="68">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
