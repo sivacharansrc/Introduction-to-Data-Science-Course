@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f8e07547-f0cd-4e69-847d-8faa0f8efaf9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,20 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="143" column="16" selection-start-line="143" selection-start-column="16" selection-end-line="143" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/data_prep_function.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="29" selection-start-column="29" selection-end-column="29" />
-              <folding>
-                <element signature="e#945#1023#0" />
-              </folding>
+            <state relative-caret-position="574">
+              <caret line="253" column="46" lean-forward="true" selection-start-line="253" selection-start-column="46" selection-end-line="253" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -41,17 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5026">
-              <caret line="359" selection-start-line="359" selection-end-line="361" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classification Project/input/Data Description.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="23" selection-start-line="9" selection-end-line="9" selection-end-column="23" />
+            <state relative-caret-position="334">
+              <caret line="572" column="85" lean-forward="true" selection-start-line="569" selection-end-line="572" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -75,7 +53,6 @@
       <find>outl</find>
       <find>f_obs</find>
       <find>frame</find>
-      <find>corr</find>
       <find>plt.</find>
       <find>pd.cu</find>
       <find>crosst</find>
@@ -84,6 +61,8 @@
       <find>group</find>
       <find>dropna</find>
       <find>pd.cut</find>
+      <find>corr</find>
+      <find>train_test</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -112,9 +91,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="995" />
-    <option name="width" value="1565" />
-    <option name="height" value="1034" />
+    <option name="x" value="997" />
+    <option name="width" value="1563" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -128,6 +107,10 @@
       <pane id="ProjectPane">
         <subPane>
           <expand>
+            <path>
+              <item name="Introduction to Data Science Course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Introduction to Data Science Course" type="462c0819:PsiDirectoryNode" />
+            </path>
             <path>
               <item name="Introduction to Data Science Course" type="b2602c69:ProjectViewProjectNode" />
               <item name="BigMartSalesPredictions" type="462c0819:PsiDirectoryNode" />
@@ -248,6 +231,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2152" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.1859035" />
       <window_info id="Structure" order="1" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
@@ -262,7 +246,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.31855956" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.33795014" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5037975" side_tool="true" weight="0.4099723" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.49620253" visible="true" weight="0.34764543" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.49620253" visible="true" weight="0.53878117" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -390,13 +374,6 @@
     <entry file="file://$PROJECT_DIR$/Classification Project/input/Test.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="143" column="16" selection-start-line="143" selection-start-column="16" selection-end-line="143" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/data_prep_function.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -407,17 +384,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5026">
-          <caret line="359" selection-start-line="359" selection-end-line="361" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classification Project/input/Data Description.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="9" column="23" selection-start-line="9" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="572" column="85" lean-forward="true" selection-start-line="569" selection-end-line="572" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="253" column="46" lean-forward="true" selection-start-line="253" selection-start-column="46" selection-end-line="253" selection-end-column="46" />
         </state>
       </provider>
     </entry>
