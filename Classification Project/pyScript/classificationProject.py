@@ -192,7 +192,23 @@ df_final = pd.get_dummies(df_final)
 x = df_final.drop('Business_Sourced', axis=1)
 y = df_final['Business_Sourced']
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=1, stratify=y)
+x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=1, stratify=y, test_size=0.3)
+
+# Oversampling the train data to balance the imbalanced data
+from imblearn.over_sampling import SMOTE
+
+os = SMOTE(random_state=0)
+
+columns = x_train.columns
+x_train,y_train =os.fit_sample(x_train, y_train)
+x_train = pd.DataFrame(data=x_train,columns=columns )
+y_train= pd.DataFrame(data=y_train,columns=['y'])
+# we can Check the numbers of our data
+print("length of oversampled data is ",len(x_train))
+print("Number of no subscription in oversampled data",len(y_train[y_train['y']==0]))
+print("Number of subscription",len(y_train[y_train['y']==1]))
+print("Proportion of no subscription data in oversampled data is ",len(y_train[y_train['y']==0])/len(x_train))
+print("Proportion of subscription data in oversampled data is ",len(y_train[y_train['y']==1])/len(x_train))
 
 # Initiate a logistic regression object
 log_reg = LogisticRegression()
@@ -253,5 +269,5 @@ plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
 plt.title('Receiver operating characteristic')
 plt.legend(loc="lower right")
-plt.savefig('Log_ROC')
+#plt.savefig('Log_ROC')
 plt.show()
