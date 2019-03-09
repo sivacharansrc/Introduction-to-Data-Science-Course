@@ -4,15 +4,14 @@ pd.set_option('display.max_rows', 100)
 pd.set_option('expand_frame_repr', False)
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 import datetime as dt
 from sklearn.model_selection import train_test_split
 from sklearn.feature_selection import RFE
 from sklearn.linear_model import LogisticRegression
 
 df = pd.read_csv("C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/Classification Project/input/Train.csv")
-df.dropna(axis=0, inplace=True)
-
-df.boxplot(column='Manager_Business', by='Manager_Current_Designation')
+df = df.loc[~(df['Manager_DOJ'].isnull() & df['Manager_Joining_Designation'].isnull() & df['Manager_Current_Designation'].isnull() & df['Manager_Grade'].isnull() & df['Manager_Status'].isnull() & df['Manager_Gender'].isnull() & df['Manager_DoB'].isnull())]
 
 # Feature Engineering
 
@@ -43,7 +42,7 @@ df.loc[df['Applicant_Qualification'].isnull(), 'Applicant_Qualification'] = df['
 
 
 
-#4 Converting Applicant and Manager Birthdate to Age instead of date (i.e. Age as of Jan 1 2009)
+#4 Converting Manager Birthdate to Age instead of date (i.e. Age as of Jan 1 2009)
 df['Manager_DoB'] = pd.to_datetime(df['Manager_DoB'])
 df['Manager_Age_When_Recruiting'] = (df['Application_Receipt_Date'] - df['Manager_DoB'])
 df['Manager_Age_When_Recruiting'] = df['Manager_Age_When_Recruiting'].dt.days / 365
@@ -68,6 +67,10 @@ df.loc[df['Applicant_City_Zone'].isnull(), 'Applicant_City_Zone'] = df['Applican
 df['Office_PIN_Zone'] = 'Zone ' + df['Office_PIN'].apply(str).str[0:1]  # Note that when Nan is converted to String, and the first letter is subset, it literally gets stored as n
 df['Office_PIN_Zone'].replace('Zone n', np.nan, inplace=True)
 df.loc[df['Office_PIN_Zone'].isnull(), 'Office_PIN_Zone'] = df['Office_PIN_Zone'].mode()[0]
+
+sns.set_color_codes('dark')
+sns.countplot(x="Business_Sourced", hue='Office_PIN_Zone', data=df)
+
 
 #7 Feature Engineering the column: Manager_Years_In_Company
 df['Manager_Years_In_Company'] = df['Application_Receipt_Date'] - df['Manager_DOJ']

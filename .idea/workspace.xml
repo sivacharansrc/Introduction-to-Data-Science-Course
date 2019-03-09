@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f8e07547-f0cd-4e69-847d-8faa0f8efaf9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="137" column="34" lean-forward="true" selection-start-line="83" selection-end-line="147" selection-end-column="123" />
+            <state relative-caret-position="1918">
+              <caret line="137" column="34" selection-start-line="83" selection-end-line="147" selection-end-column="123" />
             </state>
           </provider>
         </entry>
@@ -28,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="378">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
         </entry>
@@ -110,9 +111,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="994" />
-    <option name="width" value="1566" />
-    <option name="height" value="1035" />
+    <option name="x" value="993" />
+    <option name="width" value="1567" />
+    <option name="height" value="1037" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -266,7 +267,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2152" height="877" extended-state="6" />
+    <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" weight="0.18543047" />
       <window_info id="Structure" order="1" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
@@ -423,6 +425,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1918">
+          <caret line="137" column="34" selection-start-line="83" selection-end-line="147" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classification Project/input/Sample Submission.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8008">
@@ -430,20 +442,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classification Project/input/Sample Submission.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="137" column="34" lean-forward="true" selection-start-line="83" selection-end-line="147" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="378">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
         </state>
       </provider>
     </entry>
