@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f8e07547-f0cd-4e69-847d-8faa0f8efaf9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1918">
-              <caret line="137" column="34" selection-start-line="83" selection-end-line="147" selection-end-column="123" />
+            <state relative-caret-position="413">
+              <caret line="272" column="10" selection-start-line="249" selection-end-line="272" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -28,8 +29,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="91" selection-start-line="91" selection-end-line="105" selection-end-column="10" />
+            <state relative-caret-position="332">
+              <caret line="263" selection-start-line="263" selection-end-line="264" selection-end-column="39" />
+              <folding>
+                <element signature="e#830#5428#0" />
+                <element signature="e#8782#13576#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classification Project/input/Sample Submission.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="14">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -116,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="993" />
     <option name="width" value="1567" />
     <option name="height" value="1037" />
@@ -276,7 +290,7 @@
     <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.18481013" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.18734178" />
       <window_info id="Structure" order="1" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info id="Favorites" order="2" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -285,11 +299,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39889196" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32963988" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.31855956" />
+      <window_info anchor="bottom" id="TODO" order="6" show_stripe_button="false" weight="0.32963988" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" weight="0.31855956" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.33795014" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5037975" side_tool="true" weight="0.4099723" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.49620253" visible="true" weight="0.35457063" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50443035" side_tool="true" weight="0.4473684" />
+      <window_info anchor="bottom" x="11" y="269" width="1580" height="323" id="Python Console" maximized="true" order="10" sideWeight="0.49556962" visible="true" weight="0.4473684" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -343,6 +357,17 @@
     <MESSAGE value="Additional description for Z Test and T Test Added" />
     <MESSAGE value="Added Paired T Test" />
     <option name="LAST_COMMIT_MESSAGE" value="Added Paired T Test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py</url>
+          <line>168</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Basic Python for Data Science/First Python Code.py" />
@@ -410,13 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1918">
-          <caret line="137" column="34" selection-start-line="83" selection-end-line="147" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Basic Python for Data Science.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -428,13 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="342" column="52" selection-start-line="342" selection-start-column="47" selection-end-line="342" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classification Project/input/Sample Submission.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -452,10 +463,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="272" column="10" selection-start-line="249" selection-end-line="272" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classification Project/input/Sample Submission.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classification Project/input/Submission 1 - Only Applicant Features.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="91" selection-start-line="91" selection-end-line="105" selection-end-column="10" />
+        <state relative-caret-position="332">
+          <caret line="263" selection-start-line="263" selection-end-line="264" selection-end-column="39" />
+          <folding>
+            <element signature="e#830#5428#0" />
+            <element signature="e#8782#13576#0" />
+          </folding>
         </state>
       </provider>
     </entry>
