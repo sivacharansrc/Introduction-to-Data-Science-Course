@@ -5,6 +5,7 @@ pd.set_option('expand_frame_repr', False)
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from scipy import math
 import datetime as dt
 from sklearn.model_selection import train_test_split
 from sklearn.feature_selection import RFE
@@ -68,13 +69,53 @@ df['Office_PIN_Zone'] = 'Zone ' + df['Office_PIN'].apply(str).str[0:1]  # Note t
 df['Office_PIN_Zone'].replace('Zone n', np.nan, inplace=True)
 df.loc[df['Office_PIN_Zone'].isnull(), 'Office_PIN_Zone'] = df['Office_PIN_Zone'].mode()[0]
 
-sns.set_color_codes('dark')
-sns.countplot(x="Business_Sourced", hue='Office_PIN_Zone', data=df)
-
-
 #7 Feature Engineering the column: Manager_Years_In_Company
 df['Manager_Years_In_Company'] = df['Application_Receipt_Date'] - df['Manager_DOJ']
 df['Manager_Years_In_Company']  = df['Manager_Years_In_Company'] .dt.days / 365
+df['Manager_Years_In_Company']  = np.where(df['Manager_Years_In_Company'] < 0, 0, df['Manager_Years_In_Company'])
+
 
 #7 Feature Engineering the column: Designation_Change
 df['Designation_Change'] = np.where(df.Manager_Joining_Designation != df.Manager_Current_Designation,1,0)
+
+#8 Feature Engineering column: Businesss_Diff & Prod_Diff
+df['Business_Diff'] = df['Manager_Business'] - df['Manager_Business2']
+df['Prod_Diff'] = df['Manager_Num_Products'] - df['Manager_Num_Products2']
+
+
+df_final = df[['ID', 'Designation_Change', 'Manager_Years_In_Company', 'Applicant_City_Zone','Application_Receipt_Month', 'Manager_Age_When_Recruiting', 'Applicant_Age_At_Joining', 'Business_Sourced', 'Business_Diff',
+			   'Prod_Diff', 'Manager_Num_Coded', 'Manager_Num_Application', 'Manager_Gender', 'Manager_Status', 'Manager_Grade', 'Applicant_Qualification',
+			   'Applicant_Occupation', 'Applicant_Marital_Status', 'Applicant_Gender']]
+
+colsToKeep = ['']
+
+plt.subplot(3,3,1)
+sns.countplot(x='Business_Sourced', hue='Applicant_City_Zone', data=df_final)
+plt.subplot(3,3,2)
+sns.countplot(x='Business_Sourced', hue='Application_Receipt_Month', data=df_final)
+plt.subplot(3,3,3)
+sns.countplot(x='Business_Sourced', hue='Manager_Gender', data=df_final)
+plt.subplot(3,3,4)
+sns.countplot(x='Business_Sourced', hue='Applicant_Qualification', data=df_final)
+plt.subplot(3,3,5)
+sns.countplot(x='Business_Sourced', hue='Applicant_Occupation', data=df_final)
+plt.subplot(3,3,6)
+sns.countplot(x='Business_Sourced', hue='Applicant_Marital_Status', data=df_final)
+plt.subplot(3,3,7)
+sns.countplot(x='Business_Sourced', hue='Applicant_Gender', data=df_final)
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
