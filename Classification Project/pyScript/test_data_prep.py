@@ -30,7 +30,7 @@ def feature_engineer(df):
 
 	#3c Filling Applicant_Marital_Status < 25 as S and > 25 as M
 
-	df.loc[(df['Applicant _Age_At_Joining'] < 25) & (df['Applicant_Marital_Status'].isnull()), 'Applicant_Marital_Status'] = "S"
+	df.loc[(df['Applicant_Age_At_Joining'] < 25) & (df['Applicant_Marital_Status'].isnull()), 'Applicant_Marital_Status'] = "S"
 	df.loc[(df['Applicant_Age_At_Joining'] >= 25) & (df['Applicant_Marital_Status'].isnull()), 'Applicant_Marital_Status'] = "M"
 
 	#3d Filling Applicant_Occupation missing values as missing
@@ -89,6 +89,8 @@ def feature_engineer(df):
 				   'Applicant_Occupation', 'Applicant_Marital_Status', 'Applicant_Gender']]
 	return df_final
 
+df_final = feature_engineer(df)
+
 colsToKeep = ['Manager_Years_In_Company', 'Applicant_City_Zone', 'Application_Receipt_Month', 'Manager_Age_When_Recruiting', 'Applicant_Age_At_Joining', 'Manager_Gender',
 			  'Applicant_Qualification', 'Applicant_Occupation', 'Applicant_Marital_Status', 'Applicant_Gender', 'Business_Sourced']
 
@@ -119,14 +121,31 @@ x.drop('Business_Sourced', axis=1, inplace=True)
 x = pd.get_dummies(x)
 # Some of the columns are mutually exclusive, so we can go ahead and remove one of the variables.. like gender, where it can be either male or female.. so we can go ahead
 # and remove one of the column
-x.drop(['Applicant_City_Zone_Zone 9', 'Manager_Gender_F', 'Applicant_Qualification_Others', 'Applicant_Occupation_Missing', 'Applicant_Marital_Status_D', 'Applicant_Gender_F'],
-	   axis=1, inplace=True)
+#x.drop(['Applicant_City_Zone_Zone 9', 'Manager_Gender_F', 'Applicant_Qualification_Others', 'Applicant_Occupation_Missing', 'Applicant_Marital_Status_D', 'Applicant_Gender_F'],
+#	   axis=1, inplace=True)
 
-x.drop(['Applicant_City_Zone_Zone 9', 'Applicant_Qualification_Others', 'Applicant_Occupation_Missing', 'Applicant_Marital_Status_D', 'Applicant_Gender_F'],
-	   axis=1, inplace=True)
+#x.drop(['Applicant_City_Zone_Zone 9', 'Applicant_Qualification_Others', 'Applicant_Occupation_Missing', 'Applicant_Marital_Status_D', 'Applicant_Gender_F'],
+#	   axis=1, inplace=True)
 
 # Splitting the Train and Test data set
 x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.3, random_state=1, stratify=y)
+
+# Oversampling the train data to balance the imbalanced data
+from imblearn.over_sampling import SMOTE
+
+os = SMOTE(random_state=0)
+
+columns = x_train.columns
+x_train,y_train =os.fit_sample(x_train, y_train)
+x_train = pd.DataFrame(data=x_train,columns=columns )
+y_train= pd.DataFrame(data=y_train,columns=['Business_Sourced'])
+# we can Check the numbers of our data
+print("length of oversampled data is ",len(x_train))
+print("Number of no subscription in oversampled data",len(y_train[y_train['Business_Sourced']==0]))
+print("Number of subscription",len(y_train[y_train['Business_Sourced']==1]))
+print("Proportion of no subscription data in oversampled data is ",len(y_train[y_train['Business_Sourced']==0])/len(x_train))
+print("Proportion of subscription data in oversampled data is ",len(y_train[y_train['Business_Sourced']==1])/len(x_train))
+
 
 # Initiating a Logistic Regression Object
 logitRegression = LogisticRegression()
@@ -246,7 +265,7 @@ def feature_engineer_test(df):
 
 df_test = feature_engineer_test(df)
 x = df_test
-x = pd.get_dummies(x)
+x = pd.get_dummies(x, drop_first=True)
 # Some of the columns are mutually exclusive, so we can go ahead and remove one of the variables.. like gender, where it can be either male or female.. so we can go ahead
 # and remove one of the column
 x.drop(['Applicant_City_Zone_Zone 9', 'Manager_Gender_F', 'Applicant_Qualification_Others', 'Applicant_Occupation_Missing', 'Applicant_Marital_Status_D', 'Applicant_Gender_F'],
