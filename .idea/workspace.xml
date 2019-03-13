@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f8e07547-f0cd-4e69-847d-8faa0f8efaf9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classification Project/output/Submission 6 - PIN Zone Removed All Data with Normalized with Std Scaler and Oversampled Data.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="230" lean-forward="true" selection-start-line="230" selection-end-line="230" />
+            <state relative-caret-position="208">
+              <caret line="244" lean-forward="true" selection-start-line="244" selection-end-line="244" />
             </state>
           </provider>
         </entry>
@@ -29,8 +28,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
+            <state relative-caret-position="53">
               <caret line="231" column="24" lean-forward="true" selection-start-line="229" selection-end-line="231" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="559" selection-start-line="559" selection-end-line="559" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -71,6 +79,7 @@
       <find>Manager_DOJManager_Num_Application</find>
       <find>standar</find>
       <find>Business_Sourced</find>
+      <find>decision Tree</find>
     </findStrings>
     <replaceStrings>
       <replace>df</replace>
@@ -293,7 +302,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" weight="0.31855956" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32963988" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50443035" side_tool="true" weight="0.4473684" />
-      <window_info active="true" anchor="bottom" x="11" y="269" width="1580" height="323" id="Python Console" maximized="true" order="10" sideWeight="0.49556962" visible="true" weight="0.5055402" />
+      <window_info active="true" anchor="bottom" x="11" y="269" width="1580" height="323" id="Python Console" maximized="true" order="10" sideWeight="0.49556962" visible="true" weight="0.40166205" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -448,13 +457,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/Applicant_Features_Only.ipynb" />
-    <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="649" column="41" selection-start-line="649" selection-start-column="34" selection-end-line="649" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classification Project/input/Data Description.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -471,15 +473,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
+        <state relative-caret-position="53">
           <caret line="231" column="24" lean-forward="true" selection-start-line="229" selection-end-line="231" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="559" selection-start-line="559" selection-end-line="559" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="230" lean-forward="true" selection-start-line="230" selection-end-line="230" />
+        <state relative-caret-position="208">
+          <caret line="244" lean-forward="true" selection-start-line="244" selection-end-line="244" />
         </state>
       </provider>
     </entry>

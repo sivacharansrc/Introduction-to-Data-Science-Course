@@ -237,6 +237,48 @@ logistic_model = sm.Logit(y_train, x_train)
 result = logistic_model.fit()
 print(result.summary2())
 
+# RUNNING A BASIC DECISION TREE ALGORITHM
+from sklearn.tree import DecisionTreeClassifier
+
+clf = DecisionTreeClassifier(max_depth=0.6, max_features=0.6, max_leaf_nodes=8, criterion='gini', min_samples_split=6)
+run_decision_tree()
+
+def run_decision_tree():
+	clf.fit(x_train, y_train)
+	clf.score(x_train, y_train)
+	predictions = clf.predict(x_validation)
+	train_predictions = clf.predict(x_train)
+	clf.score(x_validation, y_validation)
+
+	conf_matrix = confusion_matrix(y_validation, predictions)
+	class_report = classification_report(y_validation.tolist(), predictions.tolist())
+
+	print(conf_matrix)
+	print(class_report)
+
+	from sklearn.metrics import roc_curve, auc
+
+	false_positive_rate, true_positive_rate, thresholds = roc_curve(y_train, train_predictions)
+	roc_auc = auc(false_positive_rate, true_positive_rate)
+	print(roc_auc)
+
+
+	false_positive_rate, true_positive_rate, thresholds = roc_curve(y_validation, predictions)
+	roc_auc = auc(false_positive_rate, true_positive_rate)
+	print(roc_auc)
+
+# PREDICTING THE TEST DATA
+
+ID = test['ID']
+test.drop(['ID', 'Business_Sourced'], axis=1, inplace=True)
+
+
+predictions = clf.predict(test)
+output = pd.DataFrame({'ID': ID, 'Business_Sourced': predictions})
+
+output.to_csv("C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/Classification Project/output/Submission 14 - Basic Decision Tree.csv", index=False, header=True)
+
+
 
 
 # SUBMISSION 7
