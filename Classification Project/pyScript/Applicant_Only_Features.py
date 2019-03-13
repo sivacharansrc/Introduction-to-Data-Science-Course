@@ -99,12 +99,12 @@ df.loc[df['Business_Sourced'].isnull(), 'Business_Sourced'] = 0
 df['Business_Sourced'] = df['Business_Sourced'].astype(int)
 
 # REMOVING UNNECESSARY COLUMNS
-df.drop(['Application_Receipt_Date', 'Manager_DoB', 'Applicant_BirthDate', 'Applicant_City_PIN', 'Office_PIN', 'Manager_DOJ', 'Manager_Joining_Designation', 'Manager_Current_Designation', 'Manager_Num_Coded', 'Manager_Num_Application'], axis=1, inplace=True)
+df.drop(['Application_Receipt_Date', 'Manager_DoB', 'Applicant_BirthDate', 'Applicant_City_PIN', 'Office_PIN', 'Manager_DOJ', 'Manager_Joining_Designation', 'Manager_Current_Designation', 'Manager_Num_Coded', 'Manager_Num_Application', 'Applicant_City_Zone', 'Office_Zone'], axis=1, inplace=True)
 
 # ENCODING CATEGORICAL VARIABLES
 
 one_hot_encoding = ['Applicant_Gender', 'Applicant_Marital_Status', 'Applicant_Occupation', 'Manager_Status', 'Manager_Gender', 'Applicant_Occupation']
-label_encoding = ['Applicant_Qualification', 'Applicant_City_Zone', 'Office_Zone']
+label_encoding = ['Applicant_Qualification']
 
 df_one_hot = df.loc[:, one_hot_encoding]
 df_label = df.loc[:, label_encoding]
@@ -130,24 +130,48 @@ test = df[len(df_train):len(df)]
 
 # TRAINING FOR LOGISTIC REGRESSION MODEL
 
-train.drop('ID', axis=1, inplace=True)
-
 y = train['Business_Sourced']
-x = train.drop('Business_Sourced', axis=1)
+x = train.drop(['Business_Sourced','ID'], axis=1)
 
 # SPLITTING THE DATA IN TO TRAIN AND VALIDATION
 from sklearn.model_selection import train_test_split
 
 x_train, x_validation, y_train, y_validation = train_test_split(x,y, test_size=0.3, random_state=1, stratify=y)
 
-# NORMALIZING DATA BEFORE BUILDING MODEL
+# SCALING DATA BEFORE BUILDING MODEL
+# SCALE USING MIN MAX SCALER
 from sklearn.preprocessing import MinMaxScaler
 
-scaler = MinMaxScaler(feature_range=(0,1))
-scaler.fit(x_train)
+scaled_data = MinMaxScaler(feature_range=(0,1))
+scaled_data.fit(x_train)
 
-x_train = scaler.transform(x_train)
-x_validation = scaler.transform(x_validation)
+columns = x_train.columns
+x_train = scaled_data.transform(x_train)
+x_validation = scaled_data.transform(x_validation)
+x_train = pd.DataFrame(data=x_train,columns=columns)
+x_validation = pd.DataFrame(data=x_validation,columns=columns)
+
+# SCALE USING STANDARD SCALER
+from sklearn.preprocessing import StandardScaler
+
+scaled_data = StandardScaler()
+scaled_data.fit(x_train)
+
+columns = x_train.columns
+x_train = scaled_data.transform(x_train)
+x_validation = scaled_data.transform(x_validation)
+x_train = pd.DataFrame(data=x_train,columns=columns)
+x_validation = pd.DataFrame(data=x_validation,columns=columns)
+
+# Oversampling the train data to balance the imbalanced data
+from imblearn.over_sampling import SMOTE
+
+os = SMOTE(random_state=0)
+
+columns = x_train.columns
+x_train,y_train =os.fit_sample(x_train, y_train)
+x_train = pd.DataFrame(data=x_train,columns=columns )
+y_train= pd.DataFrame(data=y_train,columns=['Business_Sourced'])
 
 
 # BUILDING A LOGISTIC REGRESSION MODEL
@@ -162,11 +186,11 @@ predictions = logistic_regression.predict(x_validation)
 # CONFUSION MATRIX AND CLASSIFICATION REPORT
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
-y_validation = y_validation.values
+#y_validation = y_validation.values
 
 conf_matrix = confusion_matrix(y_validation.tolist(), predictions.tolist())
 classification_report = classification_report(y_validation.tolist(), predictions.tolist())
-print(confusion_matrix)
+print(conf_matrix)
 print(classification_report)
 
 # PLOTTING THE ROC CURVE
@@ -193,7 +217,9 @@ plt.show()
 ID = test['ID']
 test.drop(['ID', 'Business_Sourced'], axis=1, inplace=True)
 
-predictions = logistic_regression.predict(test)
+scaled_test = scaled_data.fit_transform(test)
+
+predictions = logistic_regression.predict(scaled_test)
 output = pd.DataFrame({'ID': ID, 'Business_Sourced': predictions})
 
-output.to_csv("C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/Classification Project/output/Submission 2 - Applicant and Manager All Data.csv", index=False, header=True)
+output.to_csv("C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/Classification Project/output/Submission 6 - PIN Zone Removed All Data with Normalized with Std Scaler and Oversampled Data.csv", index=False, header=True)

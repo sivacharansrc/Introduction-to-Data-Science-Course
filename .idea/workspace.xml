@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8e07547-f0cd-4e69-847d-8faa0f8efaf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +20,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="167" column="74" selection-start-line="167" selection-start-column="74" selection-end-line="167" selection-end-column="74" />
+            <state relative-caret-position="383">
+              <caret line="224" column="215" lean-forward="true" selection-start-line="224" selection-start-column="137" selection-end-line="224" selection-end-column="215" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="198" lean-forward="true" selection-start-line="196" selection-end-line="204" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -96,10 +104,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
-    <option name="width" value="1281" />
-    <option name="height" value="1032" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1282" />
+    <option name="height" value="1033" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -109,6 +118,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -146,7 +156,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,9 +279,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1069" y="0" width="1069" height="861" extended-state="0" />
+    <frame x="-8" y="-8" width="2152" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" weight="0.2506329" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" weight="0.2502365" />
       <window_info id="Structure" order="1" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info id="Favorites" order="2" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -283,9 +293,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" show_stripe_button="false" weight="0.32963988" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" weight="0.31855956" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.33795014" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32963988" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50443035" side_tool="true" weight="0.4473684" />
-      <window_info active="true" anchor="bottom" x="11" y="269" width="1580" height="323" id="Python Console" maximized="true" order="10" sideWeight="0.49556962" visible="true" weight="0.43201134" />
+      <window_info active="true" anchor="bottom" x="11" y="269" width="1580" height="323" id="Python Console" maximized="true" order="10" sideWeight="0.49556962" visible="true" weight="0.31855956" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -439,13 +449,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/Applicant_Features_Only.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/Applicant_Features_Only.ipynb" />
     <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -460,13 +464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="203" column="53" selection-start-line="196" selection-end-line="210" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -474,10 +471,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="198" lean-forward="true" selection-start-line="196" selection-end-line="204" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="167" column="74" selection-start-line="167" selection-start-column="74" selection-end-line="167" selection-end-column="74" />
+        <state relative-caret-position="383">
+          <caret line="224" column="215" lean-forward="true" selection-start-line="224" selection-start-column="137" selection-end-line="224" selection-end-column="215" />
         </state>
       </provider>
     </entry>
