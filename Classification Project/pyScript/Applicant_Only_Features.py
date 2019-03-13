@@ -103,25 +103,27 @@ df.drop(['Application_Receipt_Date', 'Manager_DoB', 'Applicant_BirthDate', 'Appl
 
 # ENCODING CATEGORICAL VARIABLES
 
-one_hot_encoding = ['Applicant_Gender', 'Applicant_Marital_Status', 'Applicant_Occupation', 'Manager_Status', 'Manager_Gender', 'Applicant_Occupation']
-label_encoding = ['Applicant_Qualification']
-
+one_hot_encoding = ['Applicant_Gender', 'Applicant_Marital_Status', 'Manager_Status', 'Manager_Gender', 'Applicant_Occupation', 'Applicant_Qualification']
 df_one_hot = df.loc[:, one_hot_encoding]
-df_label = df.loc[:, label_encoding]
 df.drop(one_hot_encoding, axis=1, inplace=True)
-df.drop(label_encoding, axis=1, inplace=True)
 
 # PERFORMING ONE HOT ENCODING
 df_one_hot = pd.get_dummies(df_one_hot, drop_first=True)
 
-# PERFORMING LABEL ENCODING
-from sklearn.preprocessing import LabelEncoder
-label_encode = LabelEncoder()
+# ALL TRANSFORMATIONS IN ONE HOT ENCODING AS THIS GIVES BETTER ACCURACY
 
-df_label = df_label.apply(lambda col: label_encode.fit_transform(col))
+#label_encoding = ['Applicant_Qualification']
+#df_label = df.loc[:, label_encoding]
+#df.drop(label_encoding, axis=1, inplace=True)
+
+# PERFORMING LABEL ENCODING
+#from sklearn.preprocessing import LabelEncoder
+#label_encode = LabelEncoder()
+#df_label = df_label.apply(lambda col: label_encode.fit_transform(col))
 
 # CONCAT ALL THE DATA FRAMES
-df = pd.concat([df, df_one_hot, df_label], axis=1)
+df = pd.concat([df, df_one_hot], axis=1)
+# df = pd.concat([df, df_one_hot, df_label], axis=1)
 
 # SEGREGATING THE TRAIN AND THE TEST DATA
 
@@ -138,30 +140,31 @@ from sklearn.model_selection import train_test_split
 
 x_train, x_validation, y_train, y_validation = train_test_split(x,y, test_size=0.3, random_state=1, stratify=y)
 
+# NO SCALING TO BE PERFORMED AS THERE IS NO EFFECT ON THE ACCURACY
 # SCALING DATA BEFORE BUILDING MODEL
 # SCALE USING MIN MAX SCALER
-from sklearn.preprocessing import MinMaxScaler
+#from sklearn.preprocessing import MinMaxScaler
 
-scaled_data = MinMaxScaler(feature_range=(0,1))
-scaled_data.fit(x_train)
+#scaled_data = MinMaxScaler(feature_range=(0,1))
+#scaled_data.fit(x_train)
 
-columns = x_train.columns
-x_train = scaled_data.transform(x_train)
-x_validation = scaled_data.transform(x_validation)
-x_train = pd.DataFrame(data=x_train,columns=columns)
-x_validation = pd.DataFrame(data=x_validation,columns=columns)
+#columns = x_train.columns
+#x_train = scaled_data.transform(x_train)
+#x_validation = scaled_data.transform(x_validation)
+#x_train = pd.DataFrame(data=x_train,columns=columns)
+#x_validation = pd.DataFrame(data=x_validation,columns=columns)
 
 # SCALE USING STANDARD SCALER
-from sklearn.preprocessing import StandardScaler
+#from sklearn.preprocessing import StandardScaler
 
-scaled_data = StandardScaler()
-scaled_data.fit(x_train)
+#scaled_data = StandardScaler()
+#scaled_data.fit(x_train)
 
-columns = x_train.columns
-x_train = scaled_data.transform(x_train)
-x_validation = scaled_data.transform(x_validation)
-x_train = pd.DataFrame(data=x_train,columns=columns)
-x_validation = pd.DataFrame(data=x_validation,columns=columns)
+#columns = x_train.columns
+#x_train = scaled_data.transform(x_train)
+#x_validation = scaled_data.transform(x_validation)
+#x_train = pd.DataFrame(data=x_train,columns=columns)
+#x_validation = pd.DataFrame(data=x_validation,columns=columns)
 
 # Oversampling the train data to balance the imbalanced data
 from imblearn.over_sampling import SMOTE
@@ -171,13 +174,14 @@ os = SMOTE(random_state=0)
 columns = x_train.columns
 x_train,y_train =os.fit_sample(x_train, y_train)
 x_train = pd.DataFrame(data=x_train,columns=columns )
-y_train= pd.DataFrame(data=y_train,columns=['Business_Sourced'])
+#y_train= pd.DataFrame(data=y_train,columns=['Business_Sourced'])
 
 
 # BUILDING A LOGISTIC REGRESSION MODEL
 from sklearn.linear_model import LogisticRegression
 
-logistic_regression = LogisticRegression()
+#logistic_regression = LogisticRegression(solver='lbfgs', max_iter=1000) # Default solver was warn, but in future versions lbfgs would be the new default. The lbfgs required more iterations due to convergence issue. Convergence issue can be resolved by scaling as well
+logistic_regression = LogisticRegression(solver='liblinear', penalty='l2', max_iter=150) # Default solver was warn, but in future versions lbfgs would be the new default. The lbfgs required more iterations due to convergence issue. Convergence issue can be resolved by scaling as well
 logistic_regression.fit(x_train, y_train)
 logistic_regression.score(x_train, y_train)
 logistic_regression.score(x_validation, y_validation)
@@ -188,10 +192,11 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 #y_validation = y_validation.values
 
-conf_matrix = confusion_matrix(y_validation.tolist(), predictions.tolist())
-classification_report = classification_report(y_validation.tolist(), predictions.tolist())
+conf_matrix = confusion_matrix(y_validation, predictions)
+class_report = classification_report(y_validation.tolist(), predictions.tolist())
+
 print(conf_matrix)
-print(classification_report)
+print(class_report)
 
 # PLOTTING THE ROC CURVE
 from sklearn.metrics import roc_auc_score
@@ -217,9 +222,22 @@ plt.show()
 ID = test['ID']
 test.drop(['ID', 'Business_Sourced'], axis=1, inplace=True)
 
-scaled_test = scaled_data.fit_transform(test)
+test = scaled_data.fit_transform(test)
 
-predictions = logistic_regression.predict(scaled_test)
+predictions = logistic_regression.predict(test)
 output = pd.DataFrame({'ID': ID, 'Business_Sourced': predictions})
 
-output.to_csv("C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/Classification Project/output/Submission 6 - PIN Zone Removed All Data with Normalized with Std Scaler and Oversampled Data.csv", index=False, header=True)
+output.to_csv("C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/Classification Project/output/Submission 13 - Defaulting to liblinear solver with 150 iterations.csv", index=False, header=True)
+
+# UNDERSTANDING THE IMPORTANCE OF THE FEATURES
+
+import statsmodels.api as sm
+
+logistic_model = sm.Logit(y_train, x_train)
+result = logistic_model.fit()
+print(result.summary2())
+
+
+
+# SUBMISSION 7
+# df.drop(['Application_Receipt_Date', 'Manager_DoB', 'Applicant_BirthDate', 'Applicant_City_PIN', 'Office_PIN', 'Manager_DOJ', 'Manager_Joining_Designation', 'Manager_Current_Designation', 'Manager_Num_Coded', 'Manager_Num_Application', 'Applicant_City_Zone', 'Office_Zone'], axis=1, inplace=True)
