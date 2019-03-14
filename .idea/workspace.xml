@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8e07547-f0cd-4e69-847d-8faa0f8efaf9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Regression Project/input/sample submission.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Regression Project/input/test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Regression Project/input/train.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Regression Project/pyScript.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,20 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="244" lean-forward="true" selection-start-line="244" selection-end-line="244" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="231" column="24" lean-forward="true" selection-start-line="229" selection-end-line="231" selection-end-column="24" />
+            <state relative-caret-position="-84">
+              <caret selection-end-line="11" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -43,13 +38,22 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Regression Project/pyScript.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -110,10 +114,12 @@
         <option value="$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py" />
         <option value="$PROJECT_DIR$/Classification Project/pyScript/Applicant_Features_Only.ipynb" />
         <option value="$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py" />
+        <option value="$PROJECT_DIR$/Regression Project/pyScript.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1280" />
     <option name="width" value="1281" />
     <option name="height" value="1032" />
   </component>
@@ -142,13 +148,18 @@
               <item name="Introduction to Data Science Course" type="b2602c69:ProjectViewProjectNode" />
               <item name="Introduction to Data Science Course" type="462c0819:PsiDirectoryNode" />
               <item name="Classification Project" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="pyScript" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Introduction to Data Science Course" type="b2602c69:ProjectViewProjectNode" />
               <item name="Introduction to Data Science Course" type="462c0819:PsiDirectoryNode" />
-              <item name="Classification Project" type="462c0819:PsiDirectoryNode" />
-              <item name="pyScript" type="462c0819:PsiDirectoryNode" />
+              <item name="Regression Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Introduction to Data Science Course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Introduction to Data Science Course" type="462c0819:PsiDirectoryNode" />
+              <item name="Regression Project" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Introduction to Data Science Course" type="b2602c69:ProjectViewProjectNode" />
@@ -179,14 +190,15 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course\Regression Project\input" />
       <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course\Classification Project\input" />
       <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course" />
       <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course\Data Files\Predictive Modeling and Machine Learning" />
       <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course\Data Files\Understanding Statistics" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sivac\Documents\Python Projects\Introduction to Data Science Course" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -289,7 +301,7 @@
     <frame x="-8" y="-8" width="2152" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" weight="0.18684958" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.13954589" />
       <window_info id="Structure" order="1" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info id="Favorites" order="2" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -474,7 +486,17 @@
     <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
-          <caret line="231" column="24" lean-forward="true" selection-start-line="229" selection-end-line="231" selection-end-column="24" />
+          <caret line="231" column="24" selection-start-line="229" selection-end-line="231" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Regression Project/input/sample submission.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Regression Project/input/train.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="155" lean-forward="true" selection-start-column="5" selection-end-column="155" />
         </state>
       </provider>
     </entry>
@@ -487,8 +509,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="244" lean-forward="true" selection-start-line="244" selection-end-line="244" />
+        <state relative-caret-position="-84">
+          <caret selection-end-line="11" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Regression Project/pyScript.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
         </state>
       </provider>
     </entry>
