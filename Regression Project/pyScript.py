@@ -129,9 +129,51 @@ curr_dt = dt.now()
 df['Years_In_Business'] = curr_dt.year - df['Outlet_Establishment_Year']
 
 # FEATURE SELECTION FOR MODEL
-df_final = df[['ID', 'Item_MRP', 'Item_Outlet_Sales',  'Item_Visibility', 'Item_Weight',  'Fat_Content_Prop', 'Item_Type_Prop',  'Outlet_Location_Type_Prop', 'Outlet_Type_Prop',  'Outlet_Size_Prop', 'Total_Prop',  'Years_In_Business']]
+df_final = df[['ID', 'Item_Outlet_Sales', 'Total_Prop', 'Item_MRP', 'Item_Weight',  'Fat_Content_Prop', 'Item_Type_Prop',  'Outlet_Location_Type_Prop', 'Outlet_Type_Prop',  'Outlet_Size_Prop', 'Years_In_Business', 'Item_Fat_Content', 'Item_Type', 'Outlet_Location_Type', 'Outlet_Size', 'Outlet_Type']]
 
-# STANDARDIZING VARIABLES USING STANDARD SCALER
-colsToScale =
+# ENCODING CATEGORICAL VARIABLES
+
+one_hot_encoding = ['Item_Fat_Content', 'Item_Type', 'Outlet_Location_Type', 'Outlet_Size', 'Outlet_Type']
+df_one_hot = df_final.loc[:, one_hot_encoding]
+df_final.drop(one_hot_encoding, axis=1, inplace=True)
+
+# PERFORMING ONE HOT ENCODING
+df_one_hot = pd.get_dummies(df_one_hot, drop_first=True)
+
+# CONCATENATING ALL COLUMNS
+df_final = pd.concat([df_final, df_one_hot], axis=1)
 
 
+# SEGREGATING THE TRAIN AND TEST
+train = df_final[0:len(df_train)]
+test = df_final[len(df_train):len(df_final)]
+
+y_train = train['Item_Outlet_Sales']
+x_train = train.drop(['ID', 'Item_Outlet_Sales'], axis=1)
+
+test_ID = test['ID']
+test = test.drop(['ID', 'Item_Outlet_Sales'], axis=1)
+
+# SPLITTING TRAIN DATA SET IN TO TRAIN AND VALIDATION
+from sklearn.model_selection import train_test_split
+
+x_train, x_validation, y_train, y_validation = train_test_split(x_train, y_train, test_size= 0.2)
+
+# FITTING A LINEAR REGRESSION MODEL
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
+
+ols = LinearRegression()
+ols.fit(x_train, y_train)
+ols.score(x_train, y_train)
+
+predictions = ols.predict(x_validation)
+r2_score(y_validation, predictions)
+
+# The model is only able to explain 40% of the variance
+
+# PREDICTING THE TEST DATA SET
+
+predictions = ols.predict(test)
+output = pd.DataFrame({'ID': test_ID, 'Item_Outlet_Sales': predictions})
+output.to_csv("C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/Regression Project/output/Submission 2 - Linear Regression with 55 percent r square.csv", index=False, header=True)
