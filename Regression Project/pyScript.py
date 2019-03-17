@@ -67,8 +67,13 @@ df.groupby(['Item_Type', 'Outlet_Establishment_Year']).agg({'Item_Weight': 'mean
 df[(df['Outlet_Size'].isnull())].head(10)
 pd.crosstab(df['Outlet_Type'], df['Outlet_Size'])
 # FE4 From the above analysis, all grocery store are small, and all supermarket type 2 and 3 are Medium. Let us fix those values first
-
-
+##
+supermarket1 = df[df['Outlet_Type'] == 'Supermarket Type1']
+pd.crosstab(supermarket1['Outlet_Size'], supermarket1['Outlet_Location_Type'])
+##
+supermarket1 = df[df.Outlet_Size.isnull()]
+supermarket1.Outlet_Location_Type.value_counts()
+# FE5 The above analysis suggests that all Supermarket1 Tier 3 are high, and Supermarket1 Tier 2 are Small. Also, in our data set all the missing values are from Tier 2
 
 
 
@@ -80,14 +85,17 @@ df.loc[df['Item_Visibility'] == 0, 'Item_Visibility'] = minItemVisibility
 
 # FE2 - CUBE ROOT TRANSFORMATION TO FIX THE RIGHT SKEWNESS
 df.loc[:, 'Item_Visibility'] = np.cbrt(df['Item_Visibility'])
-df.Item_Visibility.plot.box()
+#df.Item_Visibility.plot.box()
 # The cube root transformation has fixed the distribution as well as outliers
 
 # FE3 - IMPUTING MISSING ITEM WEIGHT BY THE MEAN OF ITEM TYPE
 df['Item_Weight'] = df.groupby('Item_Type').Item_Weight.transform(lambda x: x.fillna(x.median()))
 
-# FE4
-df['Outlet_Size'] = np.where(df['Outlet_Type'] == 'Grocery Store', "Small", np.where(df['Outlet_Type'].isin(["Supermarket Type2", "Supermarket Type3"]), "Medium", df['Outlet_Size']))
+# FE4 - FIXING MISSING VALUES FOR OUTLET SIZE - ALL GROCERY STORE ARE SMALL IN SIZE, AND ALL SUPERMARKET TYPE 2 AND 3 ARE MEDIUM IN SIZE
+df['Outlet_Size'] = np.where(df['Outlet_Size'].isnull(), np.where(df['Outlet_Type'] == 'Grocery Store', "Small", np.where(df['Outlet_Type'].isin(["Supermarket Type2", "Supermarket Type3"]), "Medium", df['Outlet_Size'])), df['Outlet_Size'])
+
+# FE5 - WITHIN SUPERMARKET1, ALL TIER 3 ARE HIGH IN SIZE AND ALL TIER 2 ARE SMALL
+df['Outlet_Size'] = np.where(df['Outlet_Size'].isnull(), np.where((df['Outlet_Type'] == 'Supermarket Type1') & (df['Outlet_Location_Type'] == 'Tier 3'), 'High', np.where((df['Outlet_Type'] == 'Supermarket Type1') & (df['Outlet_Location_Type'] == 'Tier 2'), 'Small', df['Outlet_Size'])), df['Outlet_Size'])
 
 # ITEM FAT CONTENT
 df.Item_Fat_Content.value_counts()
@@ -98,5 +106,3 @@ df.loc[df['Item_Fat_Content'] == 'reg', 'Item_Fat_Content'] = 'Regular'
 
 # Fixed duplicate factors for Fat Item Content
 
-# OUTLET SIZE - FIXING MISSING VALUES
-df.drop('Outlet_Identifier', axis=1, inplace=True)

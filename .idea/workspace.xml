@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Regression Project/pyScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/Regression Project/pyScript.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Understanding Statistics for Data Science.py" beforeDir="false" afterPath="$PROJECT_DIR$/Understanding Statistics for Data Science.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Regression Project/pyScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="238">
+              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -30,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Understanding Statistics for Data Science.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
+            <state relative-caret-position="5964">
               <caret line="426" column="7" selection-start-line="426" selection-start-column="4" selection-end-line="426" selection-end-column="7" />
             </state>
           </provider>
@@ -109,9 +108,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1280" />
-    <option name="width" value="1281" />
-    <option name="height" value="1032" />
+    <option name="x" value="1279" />
+    <option name="width" value="1282" />
+    <option name="height" value="1033" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -492,17 +491,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Understanding Statistics for Data Science.py">
+    <entry file="file://$PROJECT_DIR$/Regression Project/pyScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="426" column="7" selection-start-line="426" selection-start-column="4" selection-end-line="426" selection-end-column="7" />
+        <state relative-caret-position="238">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Regression Project/pyScript.py">
+    <entry file="file://$PROJECT_DIR$/Understanding Statistics for Data Science.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="5964">
+          <caret line="426" column="7" selection-start-line="426" selection-start-column="4" selection-end-line="426" selection-end-column="7" />
         </state>
       </provider>
     </entry>
