@@ -75,8 +75,20 @@ supermarket1 = df[df.Outlet_Size.isnull()]
 supermarket1.Outlet_Location_Type.value_counts()
 # FE5 The above analysis suggests that all Supermarket1 Tier 3 are high, and Supermarket1 Tier 2 are Small. Also, in our data set all the missing values are from Tier 2
 
+# ITEM FAT CONTENT
+df.Item_Fat_Content.value_counts()
 
+# FE6 The duplicate values of Item Fat Content should be fixed
 
+df.groupby('Item_Fat_Content').Item_Outlet_Sales.mean()
+df.groupby('Item_Fat_Content').Item_Outlet_Sales.sum() / df.Item_Outlet_Sales.sum()  # Though the average cost of Low and Regular Fat items are almost comparable, there is a greater chance that more of Low Fat items might be sold
+df.groupby('Item_Type').Item_Outlet_Sales.sum() / df.Item_Outlet_Sales.sum()
+df.groupby('Outlet_Type').Item_Outlet_Sales.sum() / df.Item_Outlet_Sales.sum()
+df.groupby('Outlet_Location_Type').Item_Outlet_Sales.sum() / df.Item_Outlet_Sales.sum()
+df.groupby('Outlet_Size').Item_Outlet_Sales.sum() / df.Item_Outlet_Sales.sum()
+df.groupby('Item_Type').Item_Outlet_Sales.mean()
+df.groupby(['Item_Fat_Content', 'Item_Type']).Item_Outlet_Sales.mean()
+plt.scatter(df.Item_Weight, df.Item_Outlet_Sales) # Looks like there is not much information with Weight and Sales
 
 
 # FE1 - IMPUTING THE ZERO VALUES OF ITEM VISIBILITY
@@ -85,7 +97,7 @@ df.loc[df['Item_Visibility'] == 0, 'Item_Visibility'] = minItemVisibility
 
 # FE2 - CUBE ROOT TRANSFORMATION TO FIX THE RIGHT SKEWNESS
 df.loc[:, 'Item_Visibility'] = np.cbrt(df['Item_Visibility'])
-#df.Item_Visibility.plot.box()
+# df.Item_Visibility.plot.box()
 # The cube root transformation has fixed the distribution as well as outliers
 
 # FE3 - IMPUTING MISSING ITEM WEIGHT BY THE MEAN OF ITEM TYPE
@@ -97,12 +109,29 @@ df['Outlet_Size'] = np.where(df['Outlet_Size'].isnull(), np.where(df['Outlet_Typ
 # FE5 - WITHIN SUPERMARKET1, ALL TIER 3 ARE HIGH IN SIZE AND ALL TIER 2 ARE SMALL
 df['Outlet_Size'] = np.where(df['Outlet_Size'].isnull(), np.where((df['Outlet_Type'] == 'Supermarket Type1') & (df['Outlet_Location_Type'] == 'Tier 3'), 'High', np.where((df['Outlet_Type'] == 'Supermarket Type1') & (df['Outlet_Location_Type'] == 'Tier 2'), 'Small', df['Outlet_Size'])), df['Outlet_Size'])
 
-# ITEM FAT CONTENT
-df.Item_Fat_Content.value_counts()
-# Duplicate values are factors are available. This needs to be fixed
+
+# FE6 - FIXING THE DUPLICATE VALUES OF ITEM FAT CONTENT
 
 df.loc[df['Item_Fat_Content'].isin(['LF', 'low fat']), 'Item_Fat_Content'] = 'Low Fat'
 df.loc[df['Item_Fat_Content'] == 'reg', 'Item_Fat_Content'] = 'Regular'
 
-# Fixed duplicate factors for Fat Item Content
+# FE7 - CONVERTING ALL CATEGORICAL VARIABLES TO PROPORTION
+df['Fat_Content_Prop'] = df.groupby('Item_Fat_Content').Item_Outlet_Sales.transform(lambda x: x.sum()) / df.Item_Outlet_Sales.sum()
+df['Item_Type_Prop'] = df.groupby('Item_Type').Item_Outlet_Sales.transform(lambda x: x.sum()) / df.Item_Outlet_Sales.sum()
+df['Outlet_Location_Type_Prop'] = df.groupby('Outlet_Location_Type').Item_Outlet_Sales.transform(lambda x: x.sum()) / df.Item_Outlet_Sales.sum()
+df['Outlet_Type_Prop'] = df.groupby('Outlet_Type').Item_Outlet_Sales.transform(lambda x: x.sum()) / df.Item_Outlet_Sales.sum()
+df['Outlet_Size_Prop'] = df.groupby('Outlet_Size').Item_Outlet_Sales.transform(lambda x: x.sum()) / df.Item_Outlet_Sales.sum()
+df['Total_Prop'] = df.groupby(['Item_Fat_Content', 'Item_Type', 'Outlet_Location_Type', 'Outlet_Type', 'Outlet_Size']).Item_Outlet_Sales.transform(lambda x: x.sum()) / df.Item_Outlet_Sales.sum()
+
+# FE8 - CREATING A VARIABLE THAT HAS INFORMATION ON HOW MANY YEARS THE OUTLET HAS BEEN IN BUSINESS
+from datetime import datetime as dt
+curr_dt = dt.now()
+df['Years_In_Business'] = curr_dt.year - df['Outlet_Establishment_Year']
+
+# FEATURE SELECTION FOR MODEL
+df_final = df[['ID', 'Item_MRP', 'Item_Outlet_Sales',  'Item_Visibility', 'Item_Weight',  'Fat_Content_Prop', 'Item_Type_Prop',  'Outlet_Location_Type_Prop', 'Outlet_Type_Prop',  'Outlet_Size_Prop', 'Total_Prop',  'Years_In_Business']]
+
+# STANDARDIZING VARIABLES USING STANDARD SCALER
+colsToScale =
+
 
