@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8e07547-f0cd-4e69-847d-8faa0f8efaf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Regression Project/input/sample submission.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Regression Project/input/test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Regression Project/input/train.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Regression Project/pyScript.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Regression Project/pyScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/Regression Project/pyScript.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Understanding Statistics for Data Science.py" beforeDir="false" afterPath="$PROJECT_DIR$/Understanding Statistics for Data Science.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,29 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-84">
-              <caret selection-end-line="11" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="559" selection-start-line="559" selection-end-line="559" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Regression Project/pyScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+            <state relative-caret-position="168">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Understanding Statistics for Data Science.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="426" column="7" selection-start-line="426" selection-start-column="4" selection-end-line="426" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -84,6 +73,7 @@
       <find>standar</find>
       <find>Business_Sourced</find>
       <find>decision Tree</find>
+      <find>sub</find>
     </findStrings>
     <replaceStrings>
       <replace>df</replace>
@@ -100,7 +90,6 @@
         <option value="$PROJECT_DIR$/Basic Python for Data Science/First Python Code.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
-        <option value="$PROJECT_DIR$/Understanding Statistics for Data Science.py" />
         <option value="$PROJECT_DIR$/Understanding Statistics Coding Challenge.py" />
         <option value="$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/data_prep_function.py" />
         <option value="$PROJECT_DIR$/../BigMartSalesPredictions/pyScript/pyScript.py" />
@@ -114,6 +103,7 @@
         <option value="$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py" />
         <option value="$PROJECT_DIR$/Classification Project/pyScript/Applicant_Features_Only.ipynb" />
         <option value="$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py" />
+        <option value="$PROJECT_DIR$/Understanding Statistics for Data Science.py" />
         <option value="$PROJECT_DIR$/Regression Project/pyScript.py" />
       </list>
     </option>
@@ -131,7 +121,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,19 +150,11 @@
               <item name="Regression Project" type="462c0819:PsiDirectoryNode" />
               <item name="input" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Introduction to Data Science Course" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigMartSalesPredictions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Introduction to Data Science Course" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigMartSalesPredictions" type="462c0819:PsiDirectoryNode" />
-              <item name="pyScript" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -213,15 +194,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jupyter Notebook.BigMartSalesPredictions">
+  <component name="RunManager" selected="Python.Basic Python for Data Science">
     <configuration name="BigMartSalesPredictions" type="JupiterNotebook" factoryName="Jupyter Notebook">
-      <module name="BigMartSalesPredictions" />
+      <module name="Introduction to Data Science Course" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\sivac\Documents\Python Projects\Python37_Virtual_Environment\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -252,6 +233,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Jupyter Notebook.BigMartSalesPredictions" />
+      <item itemvalue="Python.Basic Python for Data Science" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\sivac\AppData\Roaming\Subversion</configuration>
@@ -301,7 +286,7 @@
     <frame x="-8" y="-8" width="2152" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.13954589" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" weight="0.13954589" />
       <window_info id="Structure" order="1" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info id="Favorites" order="2" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -314,7 +299,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" weight="0.31855956" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32963988" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50443035" side_tool="true" weight="0.4473684" />
-      <window_info active="true" anchor="bottom" x="11" y="269" width="1580" height="323" id="Python Console" maximized="true" order="10" sideWeight="0.49556962" visible="true" weight="0.40166205" />
+      <window_info active="true" anchor="bottom" x="11" y="269" width="1580" height="323" id="Python Console" maximized="true" order="10" sideWeight="0.49556962" visible="true" weight="0.333795" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -453,13 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Understanding Statistics for Data Science.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="342" column="52" selection-start-line="342" selection-start-column="47" selection-end-line="342" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classification Project/input/Submission 1 - Only Applicant Features.csv" />
     <entry file="file://$PROJECT_DIR$/Classification Project/input/Sample Submission.csv">
       <provider selected="true" editor-type-id="text-editor">
@@ -476,23 +454,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2553">
-          <caret line="283" column="39" lean-forward="true" selection-start-line="282" selection-start-column="14" selection-end-line="283" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="231" column="24" selection-start-line="229" selection-end-line="231" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Regression Project/input/sample submission.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Regression Project/input/train.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -500,24 +461,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
+    <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/classificationProject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="559" selection-start-line="559" selection-end-line="559" selection-end-column="47" />
+        <state relative-caret-position="137">
+          <caret line="231" column="24" selection-start-line="229" selection-end-line="231" selection-end-column="24" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/test_data_prep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3962">
+          <caret line="283" column="39" lean-forward="true" selection-start-line="282" selection-start-column="14" selection-end-line="283" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Regression Project/input/sample submission.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
+        <state>
           <caret selection-end-line="11" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Predictive Modeling and ML Basics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="331" selection-start-line="331" selection-end-line="331" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Understanding Statistics for Data Science.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="426" column="7" selection-start-line="426" selection-start-column="4" selection-end-line="426" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Regression Project/pyScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+        <state relative-caret-position="168">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>

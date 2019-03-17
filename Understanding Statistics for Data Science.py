@@ -381,7 +381,7 @@ plt.subplot(2,2,3)
 plt.boxplot(df['Errors using typewriter'])
 plt.title('Errors using typewriter')
 plt.subplot(2,2,4)
-plt.boxplot(df['Errors using a computer'],)
+plt.boxplot(df['Errors using a computer'])
 plt.title('Errors using  a computer')
 plt.show()
 
