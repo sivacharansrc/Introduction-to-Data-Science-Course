@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8e07547-f0cd-4e69-847d-8faa0f8efaf9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Regression Project/LinearRegression_ForwardSelection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Regression Project/pyScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/Regression Project/pyScript.py" afterDir="false" />
@@ -21,16 +22,7 @@
         <entry file="file://$PROJECT_DIR$/Regression Project/pyScript.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="178" column="207" selection-start-line="178" selection-start-column="207" selection-end-line="178" selection-end-column="207" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" selection-end-column="40" />
+              <caret line="211" column="181" lean-forward="true" selection-start-line="211" selection-start-column="133" selection-end-line="211" selection-end-column="181" />
             </state>
           </provider>
         </entry>
@@ -103,15 +95,16 @@
         <option value="$PROJECT_DIR$/Classification Project/pyScript/Applicant_Features_Only.ipynb" />
         <option value="$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py" />
         <option value="$PROJECT_DIR$/Understanding Statistics for Data Science.py" />
+        <option value="$PROJECT_DIR$/Regression Project/LinearRegression_ForwardSelection.py" />
         <option value="$PROJECT_DIR$/Regression Project/pyScript.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1281" />
-    <option name="height" value="1032" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1283" />
+    <option name="height" value="1034" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -121,6 +114,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -133,22 +127,15 @@
               <item name="Introduction to Data Science Course" type="462c0819:PsiDirectoryNode" />
               <item name="Regression Project" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Introduction to Data Science Course" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Introduction to Data Science Course" type="462c0819:PsiDirectoryNode" />
-              <item name="Regression Project" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BigMartSalesPredictions" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -272,10 +259,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2152" height="877" extended-state="6" />
+    <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" weight="0.13954589" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" weight="0.1392405" />
       <window_info id="Structure" order="1" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info id="Favorites" order="2" sideWeight="0.50206614" side_tool="true" weight="0.117786184" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -483,15 +470,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Classification Project/pyScript/Applicant_Only_Features.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" selection-end-column="40" />
+        <state relative-caret-position="1736">
+          <caret line="124" selection-start-line="124" selection-end-line="124" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Regression Project/LinearRegression_ForwardSelection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Regression Project/pyScript.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="178" column="207" selection-start-line="178" selection-start-column="207" selection-end-line="178" selection-end-column="207" />
+          <caret line="211" column="181" lean-forward="true" selection-start-line="211" selection-start-column="133" selection-end-line="211" selection-end-column="181" />
         </state>
       </provider>
     </entry>

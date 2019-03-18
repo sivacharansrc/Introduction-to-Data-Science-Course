@@ -163,17 +163,50 @@ x_train, x_validation, y_train, y_validation = train_test_split(x_train, y_train
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 
-ols = LinearRegression()
-ols.fit(x_train, y_train)
-ols.score(x_train, y_train)
+model = LinearRegression()
+model.fit(x_train, y_train)
+model.score(x_train, y_train)
 
-predictions = ols.predict(x_validation)
+predictions = model.predict(x_validation)
 r2_score(y_validation, predictions)
 
-# The model is only able to explain 40% of the variance
+# The model is only able to explain 55% of the variance
+
+# RUNNING A LASSO REGRESSION TO OVERCOME MULTICOLLINEARITY IF PRESENT
+
+from sklearn.linear_model import Lasso
+
+model = Lasso(alpha=1.5, max_iter=700)
+model.fit(x_train, y_train)
+model.score(x_train, y_train)
+
+predictions = model.predict(x_validation)
+model.score(x_validation, y_validation)
+
+# RUNNING A RIDGE REGRESSION TO OVERCOME MULTICOLLINEARITY IF PRESENT
+
+from sklearn.linear_model import Ridge
+
+model = Ridge(alpha=0.79)
+model.fit(x_train, y_train)
+model.score(x_train, y_train)
+
+predictions = model.predict(x_validation)
+model.score(x_validation, y_validation)
+
+# RUNNING A RANDOM FOREST REGRESSOR
+
+from sklearn.ensemble import RandomForestRegressor
+
+model = RandomForestRegressor(n_estimators=100, random_state=1, max_depth=6, bootstrap=True, max_features=20)
+model.fit(x_train, y_train)
+model.score(x_train, y_train)
+
+predictions = model.predict(x_validation)
+model.score(x_validation, y_validation)
 
 # PREDICTING THE TEST DATA SET
 
-predictions = ols.predict(test)
+predictions = model.predict(test)
 output = pd.DataFrame({'ID': test_ID, 'Item_Outlet_Sales': predictions})
-output.to_csv("C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/Regression Project/output/Submission 2 - Linear Regression with 55 percent r square.csv", index=False, header=True)
+output.to_csv("C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/Regression Project/output/Submission 5 - RF EST100 DEPTH6 BOOTTRUE MAXFEAT20 rSquare 56.8.csv", index=False, header=True)
