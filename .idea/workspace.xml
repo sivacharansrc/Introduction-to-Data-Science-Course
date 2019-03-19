@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8e07547-f0cd-4e69-847d-8faa0f8efaf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Regression Project/LinearRegression_ForwardSelection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigMartSalesPredictions/.idea/BigMartSalesPredictions.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Regression Project/pyScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/Regression Project/pyScript.py" afterDir="false" />
@@ -21,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Regression Project/pyScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="211" column="181" lean-forward="true" selection-start-line="211" selection-start-column="133" selection-end-line="211" selection-end-column="181" />
+            <state relative-caret-position="155">
+              <caret line="202" column="91" selection-start-line="202" selection-start-column="91" selection-end-line="202" selection-end-column="91" />
             </state>
           </provider>
         </entry>
@@ -101,10 +100,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="1283" />
-    <option name="height" value="1034" />
+    <option name="x" value="-14" />
+    <option name="y" value="-14" />
+    <option name="width" value="1285" />
+    <option name="height" value="1035" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -484,8 +483,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Regression Project/pyScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="211" column="181" lean-forward="true" selection-start-line="211" selection-start-column="133" selection-end-line="211" selection-end-column="181" />
+        <state relative-caret-position="155">
+          <caret line="202" column="91" selection-start-line="202" selection-start-column="91" selection-end-line="202" selection-end-column="91" />
         </state>
       </provider>
     </entry>
