@@ -199,9 +199,9 @@ model.score(x_validation, y_validation)
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
-# model = RandomForestRegressor(n_estimators=100, random_state=1, max_depth=6, bootstrap=True, max_features=20)
+model = RandomForestRegressor(n_estimators=200, random_state=1, max_depth=6, bootstrap=True, max_features=20, oob_score=True)
 # model = RandomForestRegressor(n_estimators=300, random_state=1, max_depth=6, bootstrap=True, max_features=20, min_samples_leaf=20, min_samples_split=30, n_jobs=2, oob_score=True, criterion='mse')
-model = RandomForestRegressor(n_estimators=300, random_state=1, max_depth=6, bootstrap=True, max_features='auto', min_samples_leaf=20, min_samples_split=30, n_jobs=2, oob_score=True, criterion='mse')
+#model = RandomForestRegressor(n_estimators=300, random_state=1, max_depth=6, bootstrap=True, max_features='auto', min_samples_leaf=20, min_samples_split=30, n_jobs=2, oob_score=True, criterion='mse')
 #model = RandomForestRegressor(n_estimators=1600, random_state=1, max_depth=90, bootstrap=True, max_features='sqrt', min_samples_leaf=4, min_samples_split=2, n_jobs=6, oob_score=True, criterion='mse')
 model.fit(x_train, y_train)
 model.score(x_train, y_train)
@@ -214,4 +214,4 @@ np.sqrt(mean_squared_error(y_validation, predictions))
 
 predictions = model.predict(test)
 output = pd.DataFrame({'ID': test_ID, 'Item_Outlet_Sales': predictions})
-output.to_csv("C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/Regression Project/output/Submission 7 - RF EST300 DEPTH6 BOOTTRUE MAXFEATauto MINLEAF20 MINSPLIT30 OOBTRUE.csv", index=False, header=True)
+output.to_csv("C:/Users/sivac/Documents/Python Projects/Introduction to Data Science Course/Regression Project/output/Submission 10 - RF EST200 DEPTH6 BOOTTRUE MAXFEAT20 OOBTrue.csv", index=False, header=True)
